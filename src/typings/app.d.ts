@@ -17,7 +17,7 @@ declare namespace App {
   }
 
   export interface Edge {
-    to: number
+    to: string
     type: 'drops' | 'upgrades'
   }
 }

@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="100%" height="400px">
+  <svg width="100%" height="500px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
@@ -30,6 +30,7 @@
       a 3:1 trade-in.</p>
     <p>Data is stored in the browser's local storage. For now, the only way to
       clear it is by manually deleting the "store" key.</p>
+    <button v-on:click="clearLocalStorage()">Clear local storage &amp; reload</button>
   </div>
 </div>
 </template>
@@ -46,6 +47,10 @@ const SVG_PADDING = 10 // px
 
 function getMapAtId(id) {
   return store.state.maps.find(map => map.id === id)
+}
+
+function getMapByName(name) {
+  return store.state.maps.find(map => map.name === name)
 }
 
 function getClassNameForEdgeType(edgeType) {
@@ -74,9 +79,9 @@ function getTransformForMap(map) {
   return `translate(${c.x}px, ${c.y}px)`
 }
 
-function getLinkBetweenMapIds(fromId, toId) {
-  const start = getCoordsForMap(getMapAtId(fromId), { adjustment: MAP_DIMENSIONS / 2 })
-  const end = getCoordsForMap(getMapAtId(toId), { adjustment: MAP_DIMENSIONS / 2 })
+function getLinkBetweenMapIds(fromName, toName) {
+  const start = getCoordsForMap(getMapByName(fromName), { adjustment: MAP_DIMENSIONS / 2 })
+  const end = getCoordsForMap(getMapByName(toName), { adjustment: MAP_DIMENSIONS / 2 })
 
   const link = {
     source: [start.x, start.y],
@@ -109,7 +114,7 @@ export default {
 
         map.edges.forEach(edge => {
           links.push({
-            d: getLinkBetweenMapIds(map.id, edge.to),
+            d: getLinkBetweenMapIds(map.name, edge.to),
             className: getClassNameForEdgeType(edge.type)
           })
         })
@@ -119,6 +124,10 @@ export default {
     }
   },
   methods: {
+    clearLocalStorage() {
+      localStorage.removeItem('store')
+      window.location.reload()
+    },
     cycle(map) {
       if (map.owned && !map.completed) {
         return store.commit('completeMap', map.id)
