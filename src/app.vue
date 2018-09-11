@@ -24,6 +24,7 @@
   </svg>
 
   <div class="legend">
+    <p class="count">{{ completedMapsCount }} of 30 complete.</p>
     <p>Click a node to toggle the map between default, "owned", and "completed" states.</p>
     <p>All lines indicate map connections, but solid lines show the upgrade path.
       In other words, dashed lines indicate the maps which can't be bought with
@@ -95,16 +96,8 @@ export default {
   name: 'app',
   store,
   computed: {
-    nodes() {
-      return this.$store.state.maps.map(map => {
-        return {
-          ...map,
-          className: getClassNameForMap(map),
-          style: {
-            transform: getTransformForMap(map)
-          }
-        }
-      })
+    completedMapsCount() {
+      return this.$store.getters.completedMapsCount
     },
     links() {
       const links = []
@@ -121,6 +114,17 @@ export default {
       })
 
       return links
+    },
+    nodes() {
+      return this.$store.state.maps.map(map => {
+        return {
+          ...map,
+          className: getClassNameForMap(map),
+          style: {
+            transform: getTransformForMap(map)
+          }
+        }
+      })
     }
   },
   methods: {
@@ -183,5 +187,8 @@ rect.is-completed {
 .legend {
   color: #999;
   max-width: 500px;
+}
+.count {
+  color: #333;
 }
 </style>

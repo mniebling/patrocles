@@ -269,7 +269,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 24
+, { id: 25
   , name: 'Volcano'
   , tier: 4
   , numberInTier: 5
@@ -277,7 +277,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 25
+, { id: 26
   , name: 'Relic Chambers'
   , tier: 4
   , numberInTier: 6
@@ -285,7 +285,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 26
+, { id: 27
   , name: 'Chateau'
   , tier: 4
   , numberInTier: 7
@@ -293,7 +293,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 27
+, { id: 28
   , name: 'City Square'
   , tier: 4
   , numberInTier: 8
@@ -301,7 +301,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 28
+, { id: 29
   , name: 'Courthouse'
   , tier: 4
   , numberInTier: 9
@@ -309,7 +309,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 29
+, { id: 30
   , name: 'Lighthouse'
   , tier: 4
   , numberInTier: 10
