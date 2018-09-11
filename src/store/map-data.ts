@@ -1,4 +1,5 @@
 export const maps: App.Map[] = [
+  // #region Tier 1
   { id: 1
   , name: 'Beach'
   , tier: 1
@@ -45,6 +46,8 @@ export const maps: App.Map[] = [
     , { to: 'Alleyways', type: 'upgrades' }
     ]
   }
+  // #endregion
+  // #region Tier 2
 , { id: 5
   , name: 'Arid Lake'
   , tier: 2
@@ -116,8 +119,8 @@ export const maps: App.Map[] = [
     , { to: 'Arcade', type: 'upgrades' }
     ]
   }
-  // Tier 3
-  // --------------------------------------------
+  // #endregion
+  // #region Tier 3
 , { id: 11
   , name: 'Peninsula'
   , tier: 3
@@ -125,6 +128,10 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Strand', type: 'drops' }
+    , { to: 'Canyon', type: 'upgrades' }
+    ]
   }
 , { id: 12
   , name: 'Iceberg'
@@ -133,6 +140,9 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Strand', type: 'upgrades' }
+    ]
   }
 , { id: 13
   , name: 'Cells'
@@ -141,6 +151,9 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+   , edges:
+    [ { to: 'Grotto', type: 'upgrades' }
+    ]
   }
 , { id: 14
   , name: 'Excavation'
@@ -149,6 +162,10 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Grotto', type: 'drops' }
+    , { to: 'Gorge', type: 'upgrades' }
+    ]
   }
 , { id: 15
   , name: 'Leyline'
@@ -157,6 +174,10 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Gorge', type: 'drops' }
+    , { to: 'Volcano', type: 'upgrades' }
+    ]
   }
 , { id: 16
   , name: 'Burial Chambers'
@@ -165,6 +186,9 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Relic Chambers', type: 'upgrades' }
+    ]
   }
 , { id: 17
   , name: 'Springs'
@@ -173,6 +197,9 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Chateau', type: 'upgrades' }
+    ]
   }
 , { id: 18
   , name: 'Cage'
@@ -181,6 +208,10 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Courthouse', type: 'drops' }
+    , { to: 'City Square', type: 'upgrades' }
+    ]
   }
 , { id: 19
   , name: 'Arcade'
@@ -189,6 +220,9 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Courthouse', type: 'upgrades' }
+    ]
   }
 , { id: 20
   , name: 'Port'
@@ -197,5 +231,91 @@ export const maps: App.Map[] = [
   , level: 70
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Lighthouse', type: 'upgrades' }
+    ]
   }
+  // #endregion
+  // #region Tier 4
+, { id: 21
+  , name: 'Canyon'
+  , tier: 4
+  , numberInTier: 1
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 22
+  , name: 'Strand'
+  , tier: 4
+  , numberInTier: 2
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 23
+  , name: 'Grotto'
+  , tier: 4
+  , numberInTier: 3
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 24
+  , name: 'Gorge'
+  , tier: 4
+  , numberInTier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 24
+  , name: 'Volcano'
+  , tier: 4
+  , numberInTier: 5
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 25
+  , name: 'Relic Chambers'
+  , tier: 4
+  , numberInTier: 6
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 26
+  , name: 'Chateau'
+  , tier: 4
+  , numberInTier: 7
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 27
+  , name: 'City Square'
+  , tier: 4
+  , numberInTier: 8
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 28
+  , name: 'Courthouse'
+  , tier: 4
+  , numberInTier: 9
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+, { id: 29
+  , name: 'Lighthouse'
+  , tier: 4
+  , numberInTier: 10
+  , level: 71
+  , completed: false
+  , owned: false
+  }
+  // #endregion
 ]

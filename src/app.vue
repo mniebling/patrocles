@@ -63,7 +63,7 @@ function getClassNameForMap(map) {
 }
 
 function getCoordsForMap(map, opt = {}) {
-  let x = ((map.tier - 1) * 125) + SVG_PADDING
+  let x = ((map.tier - 1) * 150) + SVG_PADDING
   let y = ((map.numberInTier - 1) * 50) + SVG_PADDING
 
   if (opt.adjustment) {
@@ -79,7 +79,7 @@ function getTransformForMap(map) {
   return `translate(${c.x}px, ${c.y}px)`
 }
 
-function getLinkBetweenMapIds(fromName, toName) {
+function getLinkBetweenMaps(fromName, toName) {
   const start = getCoordsForMap(getMapByName(fromName), { adjustment: MAP_DIMENSIONS / 2 })
   const end = getCoordsForMap(getMapByName(toName), { adjustment: MAP_DIMENSIONS / 2 })
 
@@ -114,7 +114,7 @@ export default {
 
         map.edges.forEach(edge => {
           links.push({
-            d: getLinkBetweenMapIds(map.name, edge.to),
+            d: getLinkBetweenMaps(map.name, edge.to),
             className: getClassNameForEdgeType(edge.type)
           })
         })
