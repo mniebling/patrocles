@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex, { StoreOptions } from 'vuex'
 
 import { maps } from './map-data'
-import { completedMapsCount } from './getters'
+import { completedMapsCount, totalMapsCount } from './getters'
 import { acquireMap, clearMap, completeMap, initializeStore } from './mutations'
 
 Vue.use(Vuex)
@@ -16,7 +16,8 @@ const store: StoreOptions<RootState> = {
     maps
   },
   getters: {
-    completedMapsCount
+    completedMapsCount,
+    totalMapsCount
   },
   mutations: {
     acquireMap,

@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="100%" height="500px">
+  <svg width="100%" height="550px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
@@ -18,13 +18,17 @@
           v-on:click="cycle(map)"
           height="20"
           width="20"></rect>
-        <text v-bind:style="map.style" dx="25" dy="15">{{ map.name }}</text>
+        <text
+          v-bind:style="map.style"
+          v-bind:class="map.className"
+          dx="25"
+          dy="15">{{ map.name }}</text>
       </g>
     </transition-group>
   </svg>
 
   <div class="legend">
-    <p class="count">{{ completedMapsCount }} of 30 complete.</p>
+    <p class="count">{{ completedMapsCount }} of {{ totalMapsCount }} complete.</p>
     <p>Click a node to toggle the map between default, "owned", and "completed" states.</p>
     <p>All lines indicate map connections, but solid lines show the upgrade path.
       In other words, dashed lines indicate the maps which can't be bought with
@@ -59,8 +63,13 @@ function getClassNameForEdgeType(edgeType) {
 }
 
 function getClassNameForMap(map) {
-  if (map.owned && !map.completed) { return 'is-owned' }
-  if (map.completed) { return 'is-completed' }
+  let classes = []
+
+  if (map.unique) { classes.push('is-unique') }
+  if (map.owned && !map.completed) { classes.push('is-owned') }
+  if (map.completed) { classes.push('is-completed') }
+
+  return classes.join(' ')
 }
 
 function getCoordsForMap(map, opt = {}) {
@@ -125,6 +134,9 @@ export default {
           }
         }
       })
+    },
+    totalMapsCount() {
+      return this.$store.getters.totalMapsCount
     }
   },
   methods: {
@@ -160,6 +172,9 @@ svg {
 }
 text {
   font-size: 14px;
+}
+text.is-unique {
+  fill: brown;
 }
 path {
   fill: transparent;

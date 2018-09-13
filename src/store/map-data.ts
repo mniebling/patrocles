@@ -244,6 +244,9 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Spider Lair', type: 'upgrades' }
+    ]
   }
 , { id: 22
   , name: 'Strand'
@@ -252,6 +255,10 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Ancient City', type: 'upgrades' }
+    , { to: 'Whakawairua Tuahu', type: 'drops' }
+    ]
   }
 , { id: 23
   , name: 'Grotto'
@@ -260,6 +267,10 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Maze', type: 'upgrades' }
+    , { to: 'Channel', type: 'drops' }
+    ]
   }
 , { id: 24
   , name: 'Gorge'
@@ -268,6 +279,10 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Channel', type: 'upgrades' }
+    , { to: 'Sulphur Vents', type: 'drops' }
+    ]
   }
 , { id: 25
   , name: 'Volcano'
@@ -276,6 +291,9 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Sulphur Vents', type: 'upgrades' }
+    ]
   }
 , { id: 26
   , name: 'Relic Chambers'
@@ -284,6 +302,9 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Barrows', type: 'upgrades' }
+    ]
   }
 , { id: 27
   , name: 'Chateau'
@@ -292,6 +313,9 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Toxic Sewer', type: 'upgrades' }
+    ]
   }
 , { id: 28
   , name: 'City Square'
@@ -300,6 +324,10 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Conservatory', type: 'upgrades' }
+    , { to: 'Haunted Mansion', type: 'drops' }
+    ]
   }
 , { id: 29
   , name: 'Courthouse'
@@ -308,12 +336,110 @@ export const maps: App.Map[] = [
   , level: 71
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Haunted Mansion', type: 'upgrades' }
+    , { to: 'Ivory Temple', type: 'drops' }
+    ]
   }
 , { id: 30
   , name: 'Lighthouse'
   , tier: 4
   , numberInTier: 10
   , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Ivory Temple', type: 'upgrades' }
+    ]
+  }
+  // #endregion
+  // #region Tier 5
+, { id: 31
+  , name: 'Spider Lair'
+  , tier: 5
+  , numberInTier: 1
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 32
+  , name: 'Ancient City'
+  , tier: 5
+  , numberInTier: 2
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 33
+  , name: 'Whakawairua Tuahu'
+  , tier: 5
+  , numberInTier: 3
+  , level: 72
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 34
+  , name: 'Maze'
+  , tier: 5
+  , numberInTier: 4
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 35
+  , name: 'Channel'
+  , tier: 5
+  , numberInTier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 36
+  , name: 'Sulphur Vents'
+  , tier: 5
+  , numberInTier: 6
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 37
+  , name: 'Barrows'
+  , tier: 5
+  , numberInTier: 7
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 38
+  , name: 'Toxic Sewer'
+  , tier: 5
+  , numberInTier: 8
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 39
+  , name: 'Conservatory'
+  , tier: 5
+  , numberInTier: 9
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 40
+  , name: 'Haunted Mansion'
+  , tier: 5
+  , numberInTier: 10
+  , level: 72
+  , completed: false
+  , owned: false
+  }
+, { id: 41
+  , name: 'Ivory Temple'
+  , tier: 5
+  , numberInTier: 11
+  , level: 72
   , completed: false
   , owned: false
   }

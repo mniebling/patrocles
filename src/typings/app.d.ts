@@ -13,6 +13,7 @@ declare namespace App {
     name: string
     numberInTier: number
     owned: boolean
+    unique?: boolean
     tier: number
   }
 
