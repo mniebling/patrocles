@@ -73,7 +73,7 @@ function getClassNameForMap(map) {
 }
 
 function getCoordsForMap(map, opt = {}) {
-  let x = ((map.tier - 1) * 150) + SVG_PADDING
+  let x = ((map.tier - 1) * 160) + SVG_PADDING
   let y = ((map.numberInTier - 1) * 50) + SVG_PADDING
 
   if (opt.adjustment) {
