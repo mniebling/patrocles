@@ -5,7 +5,6 @@ import { maps } from '@/store/map-data'
 describe('map-data.ts', () => {
 
   it('should have all unique ids', () => {
-    const ids = maps.map(m => m.id)
     const uniqueIds: number[] = []
 
     maps.forEach(map => {
@@ -14,6 +13,6 @@ describe('map-data.ts', () => {
       }
     })
 
-    expect(ids.length).to.equal(uniqueIds.length)
+    expect(maps.length).to.equal(uniqueIds.length)
   })
 })
