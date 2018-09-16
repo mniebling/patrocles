@@ -524,7 +524,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 46
+, { id: 47
   , name: 'Ashen Wood'
   , tier: 6
   , numberInTier: 6
@@ -532,7 +532,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 47
+, { id: 48
   , name: 'Mausoleum'
   , tier: 6
   , numberInTier: 7
@@ -540,7 +540,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 46
+, { id: 49
   , name: 'Cemetary'
   , tier: 6
   , numberInTier: 8
@@ -548,7 +548,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 47
+, { id: 50
   , name: 'Phantasmagoria'
   , tier: 6
   , numberInTier: 9
@@ -556,7 +556,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 48
+, { id: 51
   , name: 'Academy'
   , tier: 6
   , numberInTier: 10
@@ -564,7 +564,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   }
-, { id: 49
+, { id: 52
   , name: 'Wharf'
   , tier: 6
   , numberInTier: 11
