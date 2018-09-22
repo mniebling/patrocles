@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="100%" height="550px">
+  <svg width="100%" height="650px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
@@ -172,13 +172,14 @@ svg {
 }
 text {
   font-size: 14px;
+  pointer-events: none; /* prevent accidental highlighting */
 }
 text.is-unique {
   fill: brown;
 }
 path {
   fill: transparent;
-  stroke: #aaa;
+  stroke: #bbb;
 }
 path.is-drop-only {
   stroke-dasharray: 4 4;

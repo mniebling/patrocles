@@ -260,10 +260,19 @@ export const maps: App.Map[] = [
     , { to: 'Whakawairua Tuahu', type: 'drops' }
     ]
   }
+, { id: 33
+  , name: 'Whakawairua Tuahu'
+  , tier: 4
+  , numberInTier: 3
+  , level: 71
+  , completed: false
+  , owned: false
+  , unique: true
+  }
 , { id: 23
   , name: 'Grotto'
   , tier: 4
-  , numberInTier: 3
+  , numberInTier: 4
   , level: 71
   , completed: false
   , owned: false
@@ -275,7 +284,7 @@ export const maps: App.Map[] = [
 , { id: 24
   , name: 'Gorge'
   , tier: 4
-  , numberInTier: 4
+  , numberInTier: 5
   , level: 71
   , completed: false
   , owned: false
@@ -287,7 +296,7 @@ export const maps: App.Map[] = [
 , { id: 25
   , name: 'Volcano'
   , tier: 4
-  , numberInTier: 5
+  , numberInTier: 6
   , level: 71
   , completed: false
   , owned: false
@@ -298,7 +307,7 @@ export const maps: App.Map[] = [
 , { id: 26
   , name: 'Relic Chambers'
   , tier: 4
-  , numberInTier: 6
+  , numberInTier: 7
   , level: 71
   , completed: false
   , owned: false
@@ -309,7 +318,7 @@ export const maps: App.Map[] = [
 , { id: 27
   , name: 'Chateau'
   , tier: 4
-  , numberInTier: 7
+  , numberInTier: 8
   , level: 71
   , completed: false
   , owned: false
@@ -320,7 +329,7 @@ export const maps: App.Map[] = [
 , { id: 28
   , name: 'City Square'
   , tier: 4
-  , numberInTier: 8
+  , numberInTier: 9
   , level: 71
   , completed: false
   , owned: false
@@ -332,7 +341,7 @@ export const maps: App.Map[] = [
 , { id: 29
   , name: 'Courthouse'
   , tier: 4
-  , numberInTier: 9
+  , numberInTier: 10
   , level: 71
   , completed: false
   , owned: false
@@ -344,7 +353,7 @@ export const maps: App.Map[] = [
 , { id: 30
   , name: 'Lighthouse'
   , tier: 4
-  , numberInTier: 10
+  , numberInTier: 11
   , level: 71
   , completed: false
   , owned: false
@@ -377,15 +386,6 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: 'Fields', type: 'upgrades' }
     ]
-  }
-, { id: 33
-  , name: 'Whakawairua Tuahu'
-  , tier: 5
-  , numberInTier: 3
-  , level: 72
-  , completed: false
-  , owned: false
-  , unique: true
   }
 , { id: 34
   , name: 'Maze'
@@ -432,7 +432,7 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: 'Mausoleum', type: 'upgrades' }
     , { to: 'Ashen Wood', type: 'drops' }
-    , { to: 'Cemetary', type: 'drops' }
+    , { to: 'Cemetery', type: 'drops' }
     ]
   }
 , { id: 38
@@ -443,7 +443,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Cemetary', type: 'upgrades' }
+    [ { to: 'Cemetery', type: 'upgrades' }
     , { to: 'Phantasmagoria', type: 'drops' }
     ]
   }
@@ -491,6 +491,9 @@ export const maps: App.Map[] = [
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Residence', type: 'upgrades' }
+    ]
   }
 , { id: 43
   , name: 'Jungle Valley'
@@ -499,6 +502,9 @@ export const maps: App.Map[] = [
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Coral Ruins', type: 'upgrades' }
+    ]
   }
 , { id: 44
   , name: 'Thicket'
@@ -507,6 +513,9 @@ export const maps: App.Map[] = [
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Arachnid Nest', type: 'upgrades' }
+    ]
   }
 , { id: 45
   , name: 'Underground Sea'
@@ -515,6 +524,10 @@ export const maps: App.Map[] = [
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Underground River', type: 'upgrades' }
+    , { to: 'Ramparts', type: 'drops' }
+    ]
   }
 , { id: 46
   , name: 'Atoll'
@@ -523,53 +536,187 @@ export const maps: App.Map[] = [
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Ramparts', type: 'upgrades' }
+    , { to: 'Maelström of Chaos', type: 'drops' }
+    ]
   }
-, { id: 47
-  , name: 'Ashen Wood'
+, { id: 58
+  , name: 'Maelström of Chaos'
   , tier: 6
   , numberInTier: 6
   , level: 73
   , completed: false
   , owned: false
+  , unique: true
   }
-, { id: 48
-  , name: 'Mausoleum'
+, { id: 47
+  , name: 'Ashen Wood'
   , tier: 6
   , numberInTier: 7
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Lava Chamber', type: 'upgrades' }
+    ]
   }
-, { id: 49
-  , name: 'Cemetary'
+, { id: 48
+  , name: 'Mausoleum'
   , tier: 6
   , numberInTier: 8
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Lava Chamber', type: 'upgrades' }
+    ]
   }
-, { id: 50
-  , name: 'Phantasmagoria'
+, { id: 49
+  , name: 'Cemetery'
   , tier: 6
   , numberInTier: 9
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Bone Crypt', type: 'upgrades' }
+    , { to: 'Hallowed Ground', type: 'drops' }
+    ]
   }
-, { id: 51
-  , name: 'Academy'
+, { id: 61
+  , name: 'Hallowed Ground'
   , tier: 6
   , numberInTier: 10
   , level: 73
   , completed: false
   , owned: false
+  , unique: true
   }
-, { id: 52
-  , name: 'Wharf'
+, { id: 50
+  , name: 'Phantasmagoria'
   , tier: 6
   , numberInTier: 11
   , level: 73
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Dunes', type: 'upgrades' }
+    , { to: 'Bone Crypt', type: 'drops' }
+    ]
   }
+, { id: 51
+  , name: 'Academy'
+  , tier: 6
+  , numberInTier: 12
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Tribunal', type: 'upgrades' }
+    , { to: 'Gardens', type: 'drops' }
+    ]
+  }
+, { id: 52
+  , name: 'Wharf'
+  , tier: 6
+  , numberInTier: 13
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Bazaar', type: 'upgrades' }
+    ]
+  }
+  // #endregion
+  // #region Tier 7
+, { id: 53
+  , name: 'Residence'
+  , tier: 7
+  , numberInTier: 1
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 54
+  , name: 'Coral Ruins'
+  , tier: 7
+  , numberInTier: 2
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 55
+  , name: 'Arachnid Nest'
+  , tier: 7
+  , numberInTier: 3
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 56
+  , name: 'Underground River'
+  , tier: 7
+  , numberInTier: 4
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 57
+  , name: 'Ramparts'
+  , tier: 7
+  , numberInTier: 5
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 59
+  , name: 'Lava Chamber'
+  , tier: 7
+  , numberInTier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 60
+  , name: 'Bone Crypt'
+  , tier: 7
+  , numberInTier: 8
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 62
+  , name: 'Dunes'
+  , tier: 7
+  , numberInTier: 9
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 63
+  , name: 'Tribunal'
+  , tier: 7
+  , numberInTier: 10
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 64
+  , name: 'Gardens'
+  , tier: 7
+  , numberInTier: 11
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 65
+  , name: 'Bazaar'
+  , tier: 7
+  , numberInTier: 12
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+  // #endregion
 ]
