@@ -11,7 +11,6 @@ declare namespace App {
     id: number
     level: number
     name: string
-    numberInTier: number
     owned: boolean
     unique?: boolean
     tier: number

@@ -1,9 +1,9 @@
-import { maps } from '@/store/map-data'
 import store from '@/store/store'
 
 
+/** Returns the number of maps in a given tier. */
 export function countMapsInTier(tier: number) {
-  return maps.filter(m => m.tier === tier).length
+  return getMapsInTier(tier).length
 }
 
 export function getMapAtId(id: number) {
@@ -18,4 +18,14 @@ export function getMapByName(name: string) {
   }
 
   return result
+}
+
+/** Returns all maps in a given tier. */
+export function getMapsInTier(tier: number) {
+  return store.state.maps.filter(m => m.tier === tier)
+}
+
+/** Returns the 0-indexed ordinal position of a given map in its tier. */
+export function positionInTier(map: App.Map) {
+  return getMapsInTier(map.tier).indexOf(map)
 }

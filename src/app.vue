@@ -43,8 +43,9 @@
 
 <script lang="ts">
 import * as d3 from 'd3'
+import Vue from 'vue'
 import { mapState, StoreOptions } from 'vuex'
-import { countMapsInTier, getMapAtId, getMapByName } from './components/map-helpers'
+import { positionInTier, getMapAtId, getMapByName, countMapsInTier } from './components/map-helpers'
 import store, { RootState } from './store/store'
 import './store/local-storage'
 
@@ -69,7 +70,12 @@ function getClassNameForMap(map: App.Map) {
 
 function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
   let x = ((map.tier - 1) * 160) + SVG_PADDING
-  let y = ((map.numberInTier - 1) * 50) + SVG_PADDING
+
+  const position = positionInTier(map)
+  // const mapsInTier = countMapsInTier(map.tier)
+
+  let y = (position * 50) + SVG_PADDING
+
 
   if (opt.adjustment) {
     x += opt.adjustment
@@ -106,10 +112,11 @@ export default {
   name: 'app',
   store,
   computed: {
-    completedMapsCount(): number {
+    // TODO: Figure out why annotating `this` is necessary.
+    completedMapsCount(this: Vue): number {
       return this.$store.getters.completedMapsCount
     },
-    links(): Array<{ d: string, className: string }> {
+    links(this: Vue): Array<{ d: string, className: string }> {
       const links: Array<{ d: string, className: string }> = []
 
       this.$store.state.maps.forEach((map: App.Map) => {
@@ -125,7 +132,7 @@ export default {
 
       return links
     },
-    nodes(): App.Node[] {
+    nodes(this: Vue): App.Node[] {
       return this.$store.state.maps.map((map: App.Map) => {
         return {
           ...map,
@@ -136,7 +143,7 @@ export default {
         }
       })
     },
-    totalMapsCount(): number {
+    totalMapsCount(this: Vue): number {
       return this.$store.getters.totalMapsCount
     }
   },
@@ -155,7 +162,7 @@ export default {
       return store.commit('acquireMap', map.id)
     }
   },
-  beforeCreate(): void {
+  beforeCreate(this: Vue): void {
     this.$store.commit('initializeStore')
   }
 }
