@@ -582,6 +582,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Courtyard', type: 'upgrades' }
+    ]
   }
 , { id: 54
   , name: 'Coral Ruins'
@@ -589,6 +592,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Infested Valley', type: 'upgrades' }
+    ]
   }
 , { id: 55
   , name: 'Arachnid Nest'
@@ -596,6 +602,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Infested Valley', type: 'upgrades' }
+    ]
   }
 , { id: 63
   , name: 'Tribunal'
@@ -603,6 +612,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Vaal Pyramid', type: 'upgrades' }
+    ]
   }
 , { id: 64
   , name: 'Gardens'
@@ -610,6 +622,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Tropical Island', type: 'upgrades' }
+    ]
   }
 , { id: 65
   , name: 'Bazaar'
@@ -617,6 +632,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Laboratory', type: 'upgrades' }
+    ]
   }
 , { id: 56
   , name: 'Underground River'
@@ -624,6 +642,19 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Geode', type: 'upgrades' }
+    , { to: 'Mineral Pools', type: 'drops' }
+    , { to: `Caer Blaidd, Wolfpack's Den`, type: 'drops' }
+    ]
+  }
+, { id: 71
+  , name: `Caer Blaidd, Wolfpack's Den`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , unique: true
   }
 , { id: 57
   , name: 'Ramparts'
@@ -631,6 +662,9 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Armoury', type: 'upgrades' }
+    ]
   }
 , { id: 59
   , name: 'Lava Chamber'
@@ -638,6 +672,10 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: 'Armoury', type: 'drops' }
+    , { to: 'Overgrown Ruin', type: 'upgrades' }
+    ]
   }
 , { id: 60
   , name: 'Bone Crypt'
@@ -645,11 +683,115 @@ export const maps: App.Map[] = [
   , level: 74
   , completed: false
   , owned: false
+  , edges:
+    [ { to: `Olmec's Sanctum`, type: 'drops' }
+    , { to: 'Mud Geyser', type: 'upgrades' }
+    ]
+  }
+, { id: 76
+  , name: `Olmec's Sanctum`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , unique: true
   }
 , { id: 62
   , name: 'Dunes'
   , tier: 7
   , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Shore', type: 'upgrades' }
+    , { to: 'Mud Geyser', type: 'drops' }
+    , { to: 'Pillars of Arun', type: 'drops' }
+    ]
+  }
+, { id: 79
+  , name: 'Pillars of Arun'
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+  // #endregion
+  // #region Tier 8
+, { id: 66
+  , name: 'Courtyard'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 67
+  , name: 'Infested Valley'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 68
+  , name: 'Vaal Pyramid'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 69
+  , name: 'Tropical Island'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 70
+  , name: 'Laboratory'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 72
+  , name: 'Geode'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 73
+  , name: 'Mineral Pools'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 74
+  , name: 'Armoury'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 75
+  , name: 'Overgrown Ruin'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 77
+  , name: 'Mud Geyser'
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  }
+, { id: 78
+  , name: 'Shore'
+  , tier: 8
+  , level: 75
   , completed: false
   , owned: false
   }

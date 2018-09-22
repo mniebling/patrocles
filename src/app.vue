@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="100%" height="650px">
+  <svg width="1300px" height="650px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
@@ -175,6 +175,9 @@ export default {
 
 <style>
 /* TODO: get css-next involved for variables */
+body {
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
@@ -215,6 +218,7 @@ rect.is-completed {
 .legend {
   color: #999;
   max-width: 500px;
+  padding: 20px;
 }
 .count {
   color: #333;
