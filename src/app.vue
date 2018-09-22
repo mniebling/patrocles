@@ -29,13 +29,13 @@
 
   <div class="legend">
     <p class="count">{{ completedMapsCount }} of {{ totalMapsCount }} complete.</p>
+    <button v-on:click="clearLocalStorage()">Clear local storage &amp; reload</button>
     <p>Click a node to toggle the map between default, "owned", and "completed" states.</p>
     <p>All lines indicate map connections, but solid lines show the upgrade path.
       In other words, dashed lines indicate the maps which can't be bought with
       a 3:1 trade-in.</p>
     <p>Data is stored in the browser's local storage. For now, the only way to
       clear it is by manually deleting the "store" key.</p>
-    <button v-on:click="clearLocalStorage()">Clear local storage &amp; reload</button>
   </div>
 </div>
 </template>
@@ -45,12 +45,13 @@
 import * as d3 from 'd3'
 import Vue from 'vue'
 import { mapState, StoreOptions } from 'vuex'
-import { positionInTier, getMapAtId, getMapByName, countMapsInTier } from './components/map-helpers'
+import { positionInTier, getMapAtId, getMapByName, countMapsInTier, getMapsInTier } from './components/map-helpers'
 import store, { RootState } from './store/store'
 import './store/local-storage'
 
 const MAP_DIMENSIONS = 20 // px
-const SVG_PADDING = 10 // px
+const SVG_PADDING = 20 // px
+const VIEW_HEIGHT = 650 // px
 
 
 function getClassNameForEdgeType(edgeType: App.EdgeType) {
@@ -72,10 +73,13 @@ function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
   let x = ((map.tier - 1) * 160) + SVG_PADDING
 
   const position = positionInTier(map)
-  // const mapsInTier = countMapsInTier(map.tier)
+  const mapsInTier = countMapsInTier(map.tier)
 
-  let y = (position * 50) + SVG_PADDING
+  const scale = d3.scalePoint()
+    .domain(getMapsInTier(map.tier).map(m => m.name))
+    .range([SVG_PADDING, VIEW_HEIGHT - MAP_DIMENSIONS - SVG_PADDING])
 
+  let y = scale(map.name) || 0
 
   if (opt.adjustment) {
     x += opt.adjustment

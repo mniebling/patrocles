@@ -11,6 +11,17 @@ export const maps: App.Map[] = [
     , { to: 'Desert', type: 'upgrades' }
     ]
   }
+, { id: 4
+  , name: 'Lookout'
+  , tier: 1
+  , level: 68
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Pen', type: 'drops' }
+    , { to: 'Alleyways', type: 'upgrades' }
+    ]
+  }
 , { id: 2
   , name: 'Dungeon'
   , tier: 1
@@ -29,17 +40,6 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: 'Marshes', type: 'upgrades' }
-    ]
-  }
-, { id: 4
-  , name: 'Lookout'
-  , tier: 1
-  , level: 68
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Pen', type: 'drops' }
-    , { to: 'Alleyways', type: 'upgrades' }
     ]
   }
   // #endregion
@@ -62,6 +62,28 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: 'Iceberg', type: 'upgrades' }
+    ]
+  }
+, { id: 9
+  , name: 'Pen'
+  , tier: 2
+  , level: 69
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Cage', type: 'upgrades' }
+    ]
+  }
+, { id: 10
+  , name: 'Alleyways'
+  , tier: 2
+  , level: 69
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Port', type: 'drops' }
+    , { to: 'Cage', type: 'drops' }
+    , { to: 'Arcade', type: 'upgrades' }
     ]
   }
 , { id: 7
@@ -87,28 +109,6 @@ export const maps: App.Map[] = [
     , { to: 'Burial Chambers', type: 'drops' }
     ]
   }
-, { id: 9
-  , name: 'Pen'
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Cage', type: 'upgrades' }
-    ]
-  }
-, { id: 10
-  , name: 'Alleyways'
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Port', type: 'drops' }
-    , { to: 'Cage', type: 'drops' }
-    , { to: 'Arcade', type: 'upgrades' }
-    ]
-  }
   // #endregion
   // #region Tier 3
 , { id: 11
@@ -130,6 +130,37 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: 'Strand', type: 'upgrades' }
+    ]
+  }
+, { id: 18
+  , name: 'Cage'
+  , tier: 3
+  , level: 70
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Courthouse', type: 'drops' }
+    , { to: 'City Square', type: 'upgrades' }
+    ]
+  }
+, { id: 19
+  , name: 'Arcade'
+  , tier: 3
+  , level: 70
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Courthouse', type: 'upgrades' }
+    ]
+  }
+, { id: 20
+  , name: 'Port'
+  , tier: 3
+  , level: 70
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Lighthouse', type: 'upgrades' }
     ]
   }
 , { id: 13
@@ -184,37 +215,6 @@ export const maps: App.Map[] = [
     [ { to: 'Chateau', type: 'upgrades' }
     ]
   }
-, { id: 18
-  , name: 'Cage'
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Courthouse', type: 'drops' }
-    , { to: 'City Square', type: 'upgrades' }
-    ]
-  }
-, { id: 19
-  , name: 'Arcade'
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Courthouse', type: 'upgrades' }
-    ]
-  }
-, { id: 20
-  , name: 'Port'
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Lighthouse', type: 'upgrades' }
-    ]
-  }
   // #endregion
   // #region Tier 4
 , { id: 21
@@ -245,6 +245,38 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , unique: true
+  }
+, { id: 28
+  , name: 'City Square'
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Conservatory', type: 'upgrades' }
+    , { to: 'Haunted Mansion', type: 'drops' }
+    ]
+  }
+, { id: 29
+  , name: 'Courthouse'
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Haunted Mansion', type: 'upgrades' }
+    , { to: 'Ivory Temple', type: 'drops' }
+    ]
+  }
+, { id: 30
+  , name: 'Lighthouse'
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Ivory Temple', type: 'upgrades' }
+    ]
   }
 , { id: 23
   , name: 'Grotto'
@@ -298,38 +330,6 @@ export const maps: App.Map[] = [
     [ { to: 'Toxic Sewer', type: 'upgrades' }
     ]
   }
-, { id: 28
-  , name: 'City Square'
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Conservatory', type: 'upgrades' }
-    , { to: 'Haunted Mansion', type: 'drops' }
-    ]
-  }
-, { id: 29
-  , name: 'Courthouse'
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Haunted Mansion', type: 'upgrades' }
-    , { to: 'Ivory Temple', type: 'drops' }
-    ]
-  }
-, { id: 30
-  , name: 'Lighthouse'
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Ivory Temple', type: 'upgrades' }
-    ]
-  }
   // #endregion
   // #region Tier 5
 , { id: 31
@@ -352,6 +352,38 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: 'Fields', type: 'upgrades' }
+    ]
+  }
+, { id: 39
+  , name: 'Conservatory'
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Academy', type: 'upgrades' }
+    ]
+  }
+, { id: 40
+  , name: 'Haunted Mansion'
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Wharf', type: 'upgrades' }
+    , { to: 'Academy', type: 'drops' }
+    ]
+  }
+, { id: 41
+  , name: 'Ivory Temple'
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Thicket', type: 'upgrades' }
+    , { to: 'Wharf', type: 'drops' }
     ]
   }
 , { id: 34
@@ -409,38 +441,6 @@ export const maps: App.Map[] = [
     , { to: 'Phantasmagoria', type: 'drops' }
     ]
   }
-, { id: 39
-  , name: 'Conservatory'
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Academy', type: 'upgrades' }
-    ]
-  }
-, { id: 40
-  , name: 'Haunted Mansion'
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Wharf', type: 'upgrades' }
-    , { to: 'Academy', type: 'drops' }
-    ]
-  }
-, { id: 41
-  , name: 'Ivory Temple'
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Thicket', type: 'upgrades' }
-    , { to: 'Wharf', type: 'drops' }
-    ]
-  }
   // #endregion
   // #region Tier 6
 , { id: 42
@@ -471,6 +471,27 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: 'Arachnid Nest', type: 'upgrades' }
+    ]
+  }
+, { id: 51
+  , name: 'Academy'
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Tribunal', type: 'upgrades' }
+    , { to: 'Gardens', type: 'drops' }
+    ]
+  }
+, { id: 52
+  , name: 'Wharf'
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: 'Bazaar', type: 'upgrades' }
     ]
   }
 , { id: 45
@@ -553,27 +574,6 @@ export const maps: App.Map[] = [
     , { to: 'Bone Crypt', type: 'drops' }
     ]
   }
-, { id: 51
-  , name: 'Academy'
-  , tier: 6
-  , level: 73
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Tribunal', type: 'upgrades' }
-    , { to: 'Gardens', type: 'drops' }
-    ]
-  }
-, { id: 52
-  , name: 'Wharf'
-  , tier: 6
-  , level: 73
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Bazaar', type: 'upgrades' }
-    ]
-  }
   // #endregion
   // #region Tier 7
 , { id: 53
@@ -592,6 +592,27 @@ export const maps: App.Map[] = [
   }
 , { id: 55
   , name: 'Arachnid Nest'
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 63
+  , name: 'Tribunal'
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 64
+  , name: 'Gardens'
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  }
+, { id: 65
+  , name: 'Bazaar'
   , tier: 7
   , level: 74
   , completed: false
@@ -627,27 +648,6 @@ export const maps: App.Map[] = [
   }
 , { id: 62
   , name: 'Dunes'
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  }
-, { id: 63
-  , name: 'Tribunal'
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  }
-, { id: 64
-  , name: 'Gardens'
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  }
-, { id: 65
-  , name: 'Bazaar'
   , tier: 7
   , level: 74
   , completed: false
