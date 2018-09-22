@@ -79,7 +79,7 @@ function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
     .domain(getMapsInTier(map.tier).map(m => m.name))
     .range([SVG_PADDING, VIEW_HEIGHT - MAP_DIMENSIONS - SVG_PADDING])
 
-  let y = scale(map.name) || 0
+  let y = Math.floor(scale(map.name) || 0)
 
   if (opt.adjustment) {
     x += opt.adjustment
