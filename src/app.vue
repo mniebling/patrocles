@@ -41,28 +41,23 @@
 </template>
 
 
-<script>
+<script lang="ts">
 import * as d3 from 'd3'
-import { mapState } from 'vuex'
-import store from './store/store'
+import { mapState, StoreOptions } from 'vuex'
+import { countMapsInTier, getMapAtId, getMapByName } from './components/map-helpers'
+import store, { RootState } from './store/store'
 import './store/local-storage'
 
 const MAP_DIMENSIONS = 20 // px
 const SVG_PADDING = 10 // px
 
-function getMapAtId(id) {
-  return store.state.maps.find(map => map.id === id)
-}
 
-function getMapByName(name) {
-  return store.state.maps.find(map => map.name === name)
-}
-
-function getClassNameForEdgeType(edgeType) {
+function getClassNameForEdgeType(edgeType: App.EdgeType) {
   if (edgeType === 'drops') { return 'is-drop-only' }
+  return ''
 }
 
-function getClassNameForMap(map) {
+function getClassNameForMap(map: App.Map) {
   let classes = []
 
   if (map.unique) { classes.push('is-unique') }
@@ -72,7 +67,7 @@ function getClassNameForMap(map) {
   return classes.join(' ')
 }
 
-function getCoordsForMap(map, opt = {}) {
+function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
   let x = ((map.tier - 1) * 160) + SVG_PADDING
   let y = ((map.numberInTier - 1) * 50) + SVG_PADDING
 
@@ -84,34 +79,40 @@ function getCoordsForMap(map, opt = {}) {
   return { x, y }
 }
 
-function getTransformForMap(map) {
+function getTransformForMap(map: App.Map) {
   const c = getCoordsForMap(map)
   return `translate(${c.x}px, ${c.y}px)`
 }
 
-function getLinkBetweenMaps(fromName, toName) {
+function getLinkBetweenMaps(fromName: string, toName: string) {
   const start = getCoordsForMap(getMapByName(fromName), { adjustment: MAP_DIMENSIONS / 2 })
   const end = getCoordsForMap(getMapByName(toName), { adjustment: MAP_DIMENSIONS / 2 })
 
-  const link = {
+  const link: d3.DefaultLinkObject = {
     source: [start.x, start.y],
     target: [end.x, end.y]
   }
 
-  return d3.linkHorizontal()(link)
+  const result = d3.linkHorizontal()(link)
+
+  if (!result) {
+    throw new Error(`Couldn't compute a link between ${fromName} and ${toName}.`)
+  }
+
+  return result
 }
 
 export default {
   name: 'app',
   store,
   computed: {
-    completedMapsCount() {
+    completedMapsCount(): number {
       return this.$store.getters.completedMapsCount
     },
-    links() {
-      const links = []
+    links(): Array<{ d: string, className: string }> {
+      const links: Array<{ d: string, className: string }> = []
 
-      this.$store.state.maps.forEach(map => {
+      this.$store.state.maps.forEach((map: App.Map) => {
         if (!map.edges) { return }
 
         map.edges.forEach(edge => {
@@ -124,8 +125,8 @@ export default {
 
       return links
     },
-    nodes() {
-      return this.$store.state.maps.map(map => {
+    nodes(): App.Node[] {
+      return this.$store.state.maps.map((map: App.Map) => {
         return {
           ...map,
           className: getClassNameForMap(map),
@@ -135,16 +136,16 @@ export default {
         }
       })
     },
-    totalMapsCount() {
+    totalMapsCount(): number {
       return this.$store.getters.totalMapsCount
     }
   },
   methods: {
-    clearLocalStorage() {
+    clearLocalStorage(): void {
       localStorage.removeItem('store')
       window.location.reload()
     },
-    cycle(map) {
+    cycle(map: App.Map): void {
       if (map.owned && !map.completed) {
         return store.commit('completeMap', map.id)
       }
@@ -154,7 +155,7 @@ export default {
       return store.commit('acquireMap', map.id)
     }
   },
-  beforeCreate() {
+  beforeCreate(): void {
     this.$store.commit('initializeStore')
   }
 }

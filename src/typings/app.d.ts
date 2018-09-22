@@ -17,8 +17,19 @@ declare namespace App {
     tier: number
   }
 
+  export interface Node extends Map {
+    className: string
+    style: {
+      transform: string
+    }
+  }
+
+  export type EdgeType
+    = 'drops'
+    | 'upgrades'
+
   export interface Edge {
     to: string
-    type: 'drops' | 'upgrades'
+    type: EdgeType
   }
 }
