@@ -23,12 +23,7 @@ declare namespace App {
     }
   }
 
-  export type EdgeType
-    = 'drops'
-    | 'upgrades'
-
   export interface Edge {
     to: string
-    type: EdgeType
   }
 }

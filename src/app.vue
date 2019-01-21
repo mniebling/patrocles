@@ -4,9 +4,8 @@
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
-        v-bind:class="link.className"
-        v-bind:key="index"
-        v-bind:d="link.d">
+        v-bind:d="link.d"
+        v-bind:key="link.id">
       </path>
     </transition-group>
 
@@ -53,11 +52,6 @@ const MAP_DIMENSIONS = 20 // px
 const SVG_PADDING = 20 // px
 const VIEW_HEIGHT = 650 // px
 
-
-function getClassNameForEdgeType(edgeType: App.EdgeType) {
-  if (edgeType === 'drops') { return 'is-drop-only' }
-  return ''
-}
 
 function getClassNameForMap(map: App.Map) {
   let classes = []
@@ -120,8 +114,10 @@ export default {
     completedMapsCount(this: Vue): number {
       return this.$store.getters.completedMapsCount
     },
-    links(this: Vue): Array<{ d: string, className: string }> {
-      const links: Array<{ d: string, className: string }> = []
+    links(this: Vue): Array<{ d: string, id: number }> {
+      const links: Array<{ d: string, id: number }> = []
+
+      let id = 0
 
       this.$store.state.maps.forEach((map: App.Map) => {
         if (!map.edges) { return }
@@ -129,7 +125,7 @@ export default {
         map.edges.forEach(edge => {
           links.push({
             d: getLinkBetweenMaps(map.name, edge.to),
-            className: getClassNameForEdgeType(edge.type)
+            id: ++id
           })
         })
       })
