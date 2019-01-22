@@ -27,11 +27,11 @@ export function completeMap(state: RootState, id: number) {
 
 /** Load the data from localstorage, if available. */
 export function initializeStore(this: Store<RootState>, state: RootState) {
-  if (localStorage.getItem('store') === null) {
+  if (localStorage.getItem('patrocles:store') === null) {
     return
   }
 
-  const localState = JSON.parse(localStorage.getItem('store') || '')
+  const localState = JSON.parse(localStorage.getItem('patrocles:store') || '')
 
   this.replaceState({ ...state, ...localState })
 }

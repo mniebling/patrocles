@@ -182,8 +182,13 @@ svg {
   background-color: #f2f2f2;
 }
 text {
+  fill: #333;
   font-size: 14px;
+  paint-order: stroke;
   pointer-events: none; /* prevent accidental highlighting */
+  stroke: #f2f2f2;
+  stroke-width: 8px;
+  stroke-opacity: 0.9;
 }
 text.is-unique {
   fill: brown;

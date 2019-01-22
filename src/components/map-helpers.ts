@@ -14,7 +14,7 @@ export function getMapByName(name: string) {
   const result = store.state.maps.find(map => map.name === name)
 
   if (result === undefined) {
-    throw new Error(`No map exists with that name.`)
+    throw new Error(`No map named "${name}" exists.`)
   }
 
   return result
