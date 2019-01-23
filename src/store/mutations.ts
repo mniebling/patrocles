@@ -33,5 +33,16 @@ export function initializeStore(this: Store<RootState>, state: RootState) {
 
   const localState = JSON.parse(localStorage.getItem('patrocles:store') || '')
 
+  // localState.maps.forEach((map: App.Map) => {
+  //   const oldVersionOfMap = state.maps.find(m => map.id === m.id)
+
+  //   if (!oldVersionOfMap) { return }
+
+  //   map.owned = oldVersionOfMap.owned
+  //   map.completed = oldVersionOfMap.completed
+
+  //   console.info(map.name + ' updated owned & completed')
+  // })
+
   this.replaceState({ ...state, ...localState })
 }

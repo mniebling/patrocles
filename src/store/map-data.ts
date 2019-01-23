@@ -1,255 +1,252 @@
 export const maps: App.Map[] = [
   // #region Tier 1
   { id: 1
-  , name: 'Atoll'
+  , name: `Atoll`
   , tier: 1
   , level: 68
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Arid Lake' }
-    , { to: 'Iceberg' }
+    [ { to: `Arid Lake` }
+    , { to: `Iceberg` }
+    , { to: `Maelström of Chaos` }
     ]
   }
 , { id: 2
-  , name: 'Channel'
+  , name: `Maelström of Chaos`
   , tier: 1
   , level: 68
   , completed: false
   , owned: false
-  , edges:
-    [ { to: 'Armoury' }
-    , { to: 'Thicket' }
-    ]
+  , unique: true
   }
 , { id: 3
-  , name: 'Flooded Mine'
+  , name: `Channel`
   , tier: 1
   , level: 68
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Dungeon' }
+    [ { to: `Armoury` }
+    , { to: `Thicket` }
     ]
   }
 , { id: 4
-  , name: 'Ramparts'
+  , name: `Flooded Mine`
   , tier: 1
   , level: 68
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Pen' }
+    [ { to: `Dungeon` }
+    ]
+  }
+, { id: 5
+  , name: `Ramparts`
+  , tier: 1
+  , level: 68
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Pen` }
     ]
   }
   // #endregion
   // #region Tier 2
-, { id: 5
-  , name: 'Arid Lake'
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Fungal Hollow' }
-    , { to: 'Grotto' }
-    ]
-  }
 , { id: 6
-  , name: 'Iceberg'
+  , name: `Arid Lake`
   , tier: 2
   , level: 69
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Grotto' }
-    , { to: 'Cursed Crypt' }
+    [ { to: `Fungal Hollow` }
+    , { to: `Grotto` }
     ]
   }
 , { id: 7
-  , name: 'Armoury'
+  , name: `Iceberg`
   , tier: 2
   , level: 69
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Graveyard' }
-    , { to: 'Excavation' }
+    [ { to: `Grotto` }
+    , { to: `Cursed Crypt` }
     ]
   }
 , { id: 8
-  , name: 'Thicket'
+  , name: `Armoury`
   , tier: 2
   , level: 69
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Excavation' }
-    , { to: 'Desert' }
+    [ { to: `Graveyard` }
+    , { to: `Excavation` }
     ]
   }
 , { id: 9
-  , name: 'Dungeon'
+  , name: `Thicket`
   , tier: 2
   , level: 69
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Shipyard' }
-    , { to: 'Peninsula' }
+    [ { to: `Excavation` }
+    , { to: `Desert` }
     ]
   }
 , { id: 10
-  , name: 'Pen'
+  , name: `Dungeon`
   , tier: 2
   , level: 69
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Bone Crypt' }
-    , { to: 'Cage' }
+    [ { to: `Shipyard` }
+    , { to: `Peninsula` }
+    ]
+  }
+, { id: 11
+  , name: `Pen`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Bone Crypt` }
+    , { to: `Cage` }
     ]
   }
   // #endregion
   // #region Tier 3
-, { id: 11
-  , name: 'Fungal Hollow'
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: 'Marshes' }
-    , { to: 'Lighthouse' }
-    ]
-  }
 , { id: 12
-  , name: 'Grotto'
+  , name: `Fungal Hollow`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Lighthouse' }
+    [ { to: `Marshes` }
+    , { to: `Lighthouse` }
     ]
   }
 , { id: 13
-  , name: 'Cursed Crypt'
+  , name: `Grotto`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Crater' }
+    [ { to: `Lighthouse` }
     ]
   }
 , { id: 14
-  , name: 'Graveyard'
+  , name: `Cursed Crypt`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Glacier' }
+    [ { to: `Crater` }
+    , { to: `The Coward's Trial` }
     ]
   }
 , { id: 15
-  , name: 'Excavation'
+  , name: `The Coward's Trial`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
-  , edges:
-    [ { to: 'Glacier' }
-    ]
+  , unique: true
   }
 , { id: 16
-  , name: 'Desert'
+  , name: `Graveyard`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Strand' }
-    , { to: 'Spider Lair' }
+    [ { to: `Glacier` }
     ]
   }
 , { id: 17
-  , name: 'Shipyard'
+  , name: `Excavation`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Lookout' }
-    , { to: 'Courtyard' }
+    [ { to: `Glacier` }
     ]
   }
 , { id: 18
-  , name: 'Peninsula'
+  , name: `Desert`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Courtyard' }
+    [ { to: `Strand` }
+    , { to: `Spider Lair` }
     ]
   }
 , { id: 19
-  , name: 'Bone Crypt'
+  , name: `Shipyard`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Barrows' }
-    , { to: 'Beach'}
+    [ { to: `Lookout` }
+    , { to: `Courtyard` }
     ]
   }
 , { id: 20
-  , name: 'Cage'
+  , name: `Peninsula`
   , tier: 3
   , level: 70
   , completed: false
   , owned: false
   , edges:
-    [ { to: 'Beach' }
+    [ { to: `Courtyard` }
     ]
   }
-  // #endregion
-  // #region Tier 3
 , { id: 21
-  , name: 'Marshes'
-  , tier: 4
-  , level: 71
+  , name: `Bone Crypt`
+  , tier: 3
+  , level: 70
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Barrows` }
+    , { to: `Beach`}
+    , { to: `Olmec's Sanctum` }
     ]
   }
 , { id: 22
-  , name: 'Lighthouse'
-  , tier: 4
-  , level: 71
+  , name: `Olmec's Sanctum`
+  , tier: 3
+  , level: 70
   , completed: false
   , owned: false
-  , edges:
-    [
-    ]
+  , unique: true
   }
 , { id: 23
-  , name: 'Crater'
-  , tier: 4
-  , level: 71
+  , name: `Cage`
+  , tier: 3
+  , level: 70
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Beach` }
     ]
   }
+  // #endregion
+  // #region Tier 4
 , { id: 24
-  , name: 'Glacier'
+  , name: `Marshes`
   , tier: 4
   , level: 71
   , completed: false
@@ -259,7 +256,7 @@ export const maps: App.Map[] = [
     ]
   }
 , { id: 25
-  , name: 'Strand'
+  , name: `Lighthouse`
   , tier: 4
   , level: 71
   , completed: false
@@ -269,7 +266,7 @@ export const maps: App.Map[] = [
     ]
   }
 , { id: 26
-  , name: 'Spider Lair'
+  , name: `Crater`
   , tier: 4
   , level: 71
   , completed: false
@@ -279,7 +276,7 @@ export const maps: App.Map[] = [
     ]
   }
 , { id: 27
-  , name: 'Lookout'
+  , name: `Glacier`
   , tier: 4
   , level: 71
   , completed: false
@@ -289,17 +286,25 @@ export const maps: App.Map[] = [
     ]
   }
 , { id: 28
-  , name: 'Courtyard'
+  , name: `Strand`
   , tier: 4
   , level: 71
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Whakawairua Tuahu` }
     ]
   }
 , { id: 29
-  , name: 'Barrows'
+  , name: `Whakawairua Tuahu`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 30
+  , name: `Spider Lair`
   , tier: 4
   , level: 71
   , completed: false
@@ -308,8 +313,38 @@ export const maps: App.Map[] = [
     [
     ]
   }
-, { id: 30
-  , name: 'Beach'
+, { id: 31
+  , name: `Lookout`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 32
+  , name: `Courtyard`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 33
+  , name: `Barrows`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 34
+  , name: `Beach`
   , tier: 4
   , level: 71
   , completed: false

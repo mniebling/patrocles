@@ -149,7 +149,7 @@ export default {
   },
   methods: {
     clearLocalStorage(): void {
-      localStorage.removeItem('store')
+      localStorage.removeItem('patrocles:store')
       window.location.reload()
     },
     cycle(map: App.Map): void {
@@ -185,10 +185,10 @@ text {
   fill: #333;
   font-size: 14px;
   paint-order: stroke;
-  pointer-events: none; /* prevent accidental highlighting */
   stroke: #f2f2f2;
-  stroke-width: 8px;
+  stroke-width: 6px;
   stroke-opacity: 0.9;
+  user-select: none; /* prevent accidental highlighting */
 }
 text.is-unique {
   fill: brown;
