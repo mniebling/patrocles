@@ -30,9 +30,6 @@
     <p class="count">{{ completedMapsCount }} of {{ totalMapsCount }} complete.</p>
     <button v-on:click="clearLocalStorage()">Clear local storage &amp; reload</button>
     <p>Click a node to toggle the map between default, "owned", and "completed" states.</p>
-    <p>All lines indicate map connections, but solid lines show the upgrade path.
-      In other words, dashed lines indicate the maps which can't be bought with
-      a 3:1 trade-in.</p>
     <p>Data is stored in the browser's local storage. For now, the only way to
       clear it is by manually deleting the "store" key.</p>
   </div>

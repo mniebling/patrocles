@@ -252,7 +252,8 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Underground Sea` }
+    , { to: `Jungle Valley` }
     ]
   }
 , { id: 25
@@ -262,7 +263,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Jungle Valley` }
     ]
   }
 , { id: 26
@@ -272,7 +273,8 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Jungle Valley` }
+    , { to: `Mausoleum` }
     ]
   }
 , { id: 27
@@ -282,7 +284,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Alleyways` }
     ]
   }
 , { id: 28
@@ -293,6 +295,7 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: `Whakawairua Tuahu` }
+    , { to: `Maze` }
     ]
   }
 , { id: 29
@@ -310,7 +313,8 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Maze` }
+    , { to: `Port` }
     ]
   }
 , { id: 31
@@ -320,7 +324,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Residence` }
     ]
   }
 , { id: 32
@@ -330,7 +334,7 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Gardens` }
     ]
   }
 , { id: 33
@@ -340,13 +344,266 @@ export const maps: App.Map[] = [
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Vaal Pyramid` }
     ]
   }
 , { id: 34
   , name: `Beach`
   , tier: 4
   , level: 71
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Vaal Pyramid` }
+    , { to: `City Square` }
+    ]
+  }
+  // #endregion
+  // #region Tier 5
+, { id: 35
+  , name: `Underground Sea`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Oba's Cursed Trove` }
+    , { to: `Volcano` }
+    ]
+  }
+, { id: 36
+  , name: `Oba's Cursed Trove`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 36
+  , name: `Jungle Valley`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Precinct` }
+    ]
+  }
+, { id: 37
+  , name: `Mausoleum`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Precinct` }
+    , { to: `Sulphur Vents` }
+    ]
+  }
+, { id: 38
+  , name: `Alleyways`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Ashen Wood` }
+    ]
+  }
+, { id: 39
+  , name: `Maze`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Academy` }
+    ]
+  }
+, { id: 40
+  , name: `Doryani's Machinarium`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 41
+  , name: `Port`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Academy` }
+    , { to: `Haunted Mansion` }
+    ]
+  }
+, { id: 42
+  , name: `Residence`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Phantasmagoria` }
+    , { to: `Temple` }
+    ]
+  }
+, { id: 43
+  , name: `Gardens`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Temple` }
+    , { to: `Wharf` }
+    ]
+  }
+, { id: 44
+  , name: `Vaal Pyramid`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Vaults of Atziri` }
+    , { to: `Canyon` }
+    ]
+  }
+, { id: 45
+  , name: `Vaults of Atziri`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 46
+  , name: `City Square`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Fields` }
+    ]
+  }
+  // #endregion
+  // #region Tier 6
+, { id: 47
+  , name: `Volcano`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 48
+  , name: `Precinct`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 49
+  , name: `Sulphur Vents`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 50
+  , name: `Ashen Wood`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 51
+  , name: `Academy`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 52
+  , name: `Haunted Mansion`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 53
+  , name: `Phantasmagoria`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 54
+  , name: `Temple`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Poorjoy's Asylum` }
+    ]
+  }
+, { id: 55
+  , name: `Poorjoy's Asylum`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 56
+  , name: `Wharf`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 57
+  , name: `Canyon`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 58
+  , name: `Fields`
+  , tier: 6
+  , level: 73
   , completed: false
   , owned: false
   , edges:
