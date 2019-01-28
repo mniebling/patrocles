@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="1300px" height="650px">
+  <svg width="1700px" height="650px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
@@ -61,7 +61,7 @@ function getClassNameForMap(map: App.Map) {
 }
 
 function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
-  let x = ((map.tier - 1) * 160) + SVG_PADDING
+  let x = ((map.tier - 1) * 175) + SVG_PADDING
 
   const position = positionInTier(map)
   const mapsInTier = countMapsInTier(map.tier)

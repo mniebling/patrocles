@@ -379,7 +379,7 @@ export const maps: App.Map[] = [
   , owned: false
   , unique: true
   }
-, { id: 36
+, { id: 37
   , name: `Jungle Valley`
   , tier: 5
   , level: 72
@@ -389,7 +389,7 @@ export const maps: App.Map[] = [
     [ { to: `Precinct` }
     ]
   }
-, { id: 37
+, { id: 38
   , name: `Mausoleum`
   , tier: 5
   , level: 72
@@ -400,7 +400,7 @@ export const maps: App.Map[] = [
     , { to: `Sulphur Vents` }
     ]
   }
-, { id: 38
+, { id: 39
   , name: `Alleyways`
   , tier: 5
   , level: 72
@@ -410,7 +410,7 @@ export const maps: App.Map[] = [
     [ { to: `Ashen Wood` }
     ]
   }
-, { id: 39
+, { id: 40
   , name: `Maze`
   , tier: 5
   , level: 72
@@ -420,7 +420,7 @@ export const maps: App.Map[] = [
     [ { to: `Academy` }
     ]
   }
-, { id: 40
+, { id: 41
   , name: `Doryani's Machinarium`
   , tier: 5
   , level: 72
@@ -428,7 +428,7 @@ export const maps: App.Map[] = [
   , owned: false
   , unique: true
   }
-, { id: 41
+, { id: 42
   , name: `Port`
   , tier: 5
   , level: 72
@@ -439,7 +439,7 @@ export const maps: App.Map[] = [
     , { to: `Haunted Mansion` }
     ]
   }
-, { id: 42
+, { id: 43
   , name: `Residence`
   , tier: 5
   , level: 72
@@ -450,7 +450,7 @@ export const maps: App.Map[] = [
     , { to: `Temple` }
     ]
   }
-, { id: 43
+, { id: 44
   , name: `Gardens`
   , tier: 5
   , level: 72
@@ -461,7 +461,7 @@ export const maps: App.Map[] = [
     , { to: `Wharf` }
     ]
   }
-, { id: 44
+, { id: 45
   , name: `Vaal Pyramid`
   , tier: 5
   , level: 72
@@ -472,7 +472,7 @@ export const maps: App.Map[] = [
     , { to: `Canyon` }
     ]
   }
-, { id: 45
+, { id: 46
   , name: `Vaults of Atziri`
   , tier: 5
   , level: 72
@@ -480,7 +480,7 @@ export const maps: App.Map[] = [
   , owned: false
   , unique: true
   }
-, { id: 46
+, { id: 47
   , name: `City Square`
   , tier: 5
   , level: 72
@@ -492,77 +492,80 @@ export const maps: App.Map[] = [
   }
   // #endregion
   // #region Tier 6
-, { id: 47
+, { id: 48
   , name: `Volcano`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Lava Chamber` }
     ]
   }
-, { id: 48
+, { id: 49
   , name: `Precinct`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Conservatory` }
+    , { to: `Geode` }
     ]
   }
-, { id: 49
+, { id: 50
   , name: `Sulphur Vents`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Geode` }
     ]
   }
-, { id: 50
+, { id: 51
   , name: `Ashen Wood`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Primordial Pool` }
     ]
   }
-, { id: 51
+, { id: 52
   , name: `Academy`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Underground River` }
     ]
   }
-, { id: 52
+, { id: 53
   , name: `Haunted Mansion`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Underground River` }
+    , { to: `Cells` }
     ]
   }
-, { id: 53
+, { id: 54
   , name: `Phantasmagoria`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Bazaar` }
+    , { to: `Arcade` }
     ]
   }
-, { id: 54
+, { id: 55
   , name: `Temple`
   , tier: 6
   , level: 73
@@ -570,9 +573,11 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: `Poorjoy's Asylum` }
+    , { to: `Arcade` }
+    , { to: `Toxic Sewer` }
     ]
   }
-, { id: 55
+, { id: 56
   , name: `Poorjoy's Asylum`
   , tier: 6
   , level: 73
@@ -580,30 +585,428 @@ export const maps: App.Map[] = [
   , owned: false
   , unique: true
   }
-, { id: 56
+, { id: 57
   , name: `Wharf`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Toxic Sewer` }
     ]
   }
-, { id: 57
+, { id: 58
   , name: `Canyon`
   , tier: 6
   , level: 73
   , completed: false
   , owned: false
   , edges:
-    [
+    [ { to: `Ghetto` }
     ]
   }
-, { id: 58
+, { id: 59
   , name: `Fields`
   , tier: 6
   , level: 73
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Dunes` }
+    ]
+  }
+  // #endregion
+  // #region Tier 7
+, { id: 60
+  , name: `Lava Chamber`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Overgrown Ruin` }
+    ]
+  }
+, { id: 61
+  , name: `Conservatory`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Sepulchre` }
+    ]
+  }
+, { id: 62
+  , name: `Geode`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Mineral Pools` }
+    ]
+  }
+, { id: 63
+  , name: `Primordial Pool`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Promenade` }
+    ]
+  }
+, { id: 64
+  , name: `Underground River`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Caer Blaidd, Wolfpack's Den` }
+    , { to: `Laboratory` }
+    ]
+  }
+, { id: 65
+  , name: `Caer Blaidd, Wolfpack's Den`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 66
+  , name: `Cells`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Laboratory` }
+    ]
+  }
+, { id: 67
+  , name: `Bazaar`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Shore` }
+    , { to: `Arachnid Nest` }
+    ]
+  }
+, { id: 68
+  , name: `Arcade`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Arachnid Nest` }
+    ]
+  }
+, { id: 69
+  , name: `Toxic Sewer`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Mud Geyser` }
+    ]
+  }
+, { id: 70
+  , name: `Ghetto`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Wasteland` }
+    ]
+  }
+, { id: 71
+  , name: `Dunes`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Pillars of Arun` }
+    , { to: `Orchard` }
+    , { to: `Infested Valley` }
+    ]
+  }
+, { id: 72
+  , name: `Pillars of Arun`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+  // #endregion
+  // #region Tier 8
+, { id: 73
+  , name: `Overgrown Ruin`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Waterways` }
+    ]
+  }
+, { id: 74
+  , name: `Sepulchre`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Arena` }
+    ]
+  }
+, { id: 75
+  , name: `Mineral Pools`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Museum` }
+    ]
+  }
+, { id: 76
+  , name: `Promenade`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Hall of Grandmasters` }
+    , { to: `Vault` }
+    ]
+  }
+, { id: 77
+  , name: `Hall of Grandmasters`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 78
+  , name: `Laboratory`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Moon Temple` }
+    ]
+  }
+, { id: 79
+  , name: `Shore`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Mao Kun` }
+    , { to: `Relic Chambers` }
+    ]
+  }
+, { id: 80
+  , name: `Mao Kun`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 81
+  , name: `Arachnid Nest`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Ancient City` }
+    ]
+  }
+, { id: 82
+  , name: `Mud Geyser`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Scriptorium` }
+    ]
+  }
+, { id: 83
+  , name: `Wasteland`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Cemetary` }
+    ]
+  }
+, { id: 84
+  , name: `Orchard`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Waste Pool` }
+    ]
+  }
+, { id: 85
+  , name: `Infested Valley`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Tropical Island` }
+    ]
+  }
+  // #endregion
+  // #region Tier 9
+, { id: 86
+  , name: `Waterways`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 87
+  , name: `Arena`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 88
+  , name: `Museum`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `The Putrid Cloister` }
+    ]
+  }
+, { id: 89
+  , name: `The Putrid Cloister`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 90
+  , name: `Vault`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 91
+  , name: `Moon Temple`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `The Twilight Temple` }
+    ]
+  }
+, { id: 92
+  , name: `The Twilight Temple`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 93
+  , name: `Relic Chambers`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 94
+  , name: `Ancient City`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 95
+  , name: `Scriptorium`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 96
+  , name: `Cemetary`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [ { to: `Hallowed Ground` }
+    ]
+  }
+, { id: 97
+  , name: `Hallowed Ground`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , unique: true
+  }
+, { id: 98
+  , name: `Waste Pool`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , owned: false
+  , edges:
+    [
+    ]
+  }
+, { id: 99
+  , name: `Tropical Island`
+  , tier: 9
+  , level: 76
   , completed: false
   , owned: false
   , edges:
