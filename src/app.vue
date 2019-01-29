@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <svg width="1700px" height="650px">
+  <svg width="2850px" height="650px">
     <transition-group tag="g" name="links">
       <path
         v-for="(link, index) in links"
