@@ -1,30 +1,32 @@
 <template>
 <div id="app">
-  <svg width="2850px" height="650px">
-    <transition-group tag="g" name="links">
-      <path
-        v-for="(link, index) in links"
-        v-bind:d="link.d"
-        v-bind:key="link.id">
-      </path>
-    </transition-group>
+  <div class="chart-container">
+    <svg width="2850px" height="650px">
+      <transition-group tag="g" name="links">
+        <path
+          v-for="(link, index) in links"
+          v-bind:d="link.d"
+          v-bind:key="link.id">
+        </path>
+      </transition-group>
 
-    <transition-group tag="g" name="maps">
-      <g class="node" v-for="map in nodes" v-bind:key="map.id">
-        <rect
-          v-bind:style="map.style"
-          v-bind:class="map.className"
-          v-on:click="cycle(map)"
-          height="20"
-          width="20"></rect>
-        <text
-          v-bind:style="map.style"
-          v-bind:class="map.className"
-          dx="25"
-          dy="15">{{ map.name }}</text>
-      </g>
-    </transition-group>
-  </svg>
+      <transition-group tag="g" name="maps">
+        <g class="node" v-for="map in nodes" v-bind:key="map.id">
+          <rect
+            v-bind:style="map.style"
+            v-bind:class="map.className"
+            v-on:click="cycle(map)"
+            height="20"
+            width="20"></rect>
+          <text
+            v-bind:style="map.style"
+            v-bind:class="map.className"
+            dx="25"
+            dy="15">{{ map.name }}</text>
+        </g>
+      </transition-group>
+    </svg>
+  </div>
 
   <div class="legend">
     <p class="count">{{ completedMapsCount }} of {{ totalMapsCount }} complete.</p>
@@ -174,6 +176,21 @@ body {
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
+}
+.chart-container {
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+}
+.chart-container::after {
+  background: linear-gradient(to right, rgba(0,0,0,0), #f2f2f2);
+  content: '';
+  height: 100%;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 15%;
 }
 svg {
   background-color: #f2f2f2;
