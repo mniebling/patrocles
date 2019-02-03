@@ -418,6 +418,7 @@ export const maps: App.Map[] = [
   , owned: false
   , edges:
     [ { to: `Academy` }
+    , { to: `Doryani's Machinarium`}
     ]
   }
 , { id: 41
