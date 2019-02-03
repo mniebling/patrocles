@@ -42,68 +42,28 @@
 <script lang="ts">
 import * as d3 from 'd3'
 import Vue from 'vue'
-import { mapState, StoreOptions } from 'vuex'
-import { positionInTier, getMapAtId, getMapByName, countMapsInTier, getMapsInTier } from './components/map-helpers'
-import store, { RootState } from './store/store'
 import './store/local-storage'
+import store, { RootState } from './store/store'
+import { mapState, StoreOptions } from 'vuex'
 
-const MAP_DIMENSIONS = 20 // px
-const SVG_PADDING = 20 // px
-const VIEW_HEIGHT = 650 // px
+import {
+  countMapsInTier,
+  getMapAtId,
+  getMapByName,
+  getMapsInTier,
+  positionInTier
+} from './components/map-data-helpers'
 
+import {
+  MAP_DIMENSIONS,
+  SVG_PADDING,
+  VIEW_HEIGHT,
+  getClassNameForMap,
+  getCoordsForMap,
+  getLinkBetweenMaps,
+  getTransformForMap
+} from './components/map-drawing'
 
-function getClassNameForMap(map: App.Map) {
-  let classes = []
-
-  if (map.unique) { classes.push('is-unique') }
-  if (map.owned && !map.completed) { classes.push('is-owned') }
-  if (map.completed) { classes.push('is-completed') }
-
-  return classes.join(' ')
-}
-
-function getCoordsForMap(map: App.Map, opt: { adjustment?: number } = {}) {
-  let x = ((map.tier - 1) * 175) + SVG_PADDING
-
-  const position = positionInTier(map)
-  const mapsInTier = countMapsInTier(map.tier)
-
-  const scale = d3.scalePoint()
-    .domain(getMapsInTier(map.tier).map(m => m.name))
-    .range([SVG_PADDING, VIEW_HEIGHT - MAP_DIMENSIONS - SVG_PADDING])
-
-  let y = Math.floor(scale(map.name) || 0)
-
-  if (opt.adjustment) {
-    x += opt.adjustment
-    y += opt.adjustment
-  }
-
-  return { x, y }
-}
-
-function getTransformForMap(map: App.Map) {
-  const c = getCoordsForMap(map)
-  return `translate(${c.x}px, ${c.y}px)`
-}
-
-function getLinkBetweenMaps(fromName: string, toName: string) {
-  const start = getCoordsForMap(getMapByName(fromName), { adjustment: MAP_DIMENSIONS / 2 })
-  const end = getCoordsForMap(getMapByName(toName), { adjustment: MAP_DIMENSIONS / 2 })
-
-  const link: d3.DefaultLinkObject = {
-    source: [start.x, start.y],
-    target: [end.x, end.y]
-  }
-
-  const result = d3.linkHorizontal()(link)
-
-  if (!result) {
-    throw new Error(`Couldn't compute a link between ${fromName} and ${toName}.`)
-  }
-
-  return result
-}
 
 export default {
   name: 'app',
