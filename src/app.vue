@@ -40,7 +40,6 @@
 
 
 <script lang="ts">
-import * as d3 from 'd3'
 import Vue from 'vue'
 import './store/local-storage'
 import store, { RootState } from './store/store'
