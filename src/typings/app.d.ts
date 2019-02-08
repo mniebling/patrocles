@@ -1,8 +1,10 @@
 declare namespace App {
 
   export interface Tier {
+    completed: boolean
+    label: string
     number: number
-    maps: Map[]
+    owned: boolean
   }
 
   export interface Map {

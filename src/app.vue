@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <div class="chart-container">
-    <svg width="2850px" height="650px">
+    <svg width="2850px" height="670px">
       <transition-group tag="g" name="links">
         <path
           v-for="(link, index) in links"
@@ -24,6 +24,15 @@
             dx="25"
             dy="15">{{ map.name }}</text>
         </g>
+      </transition-group>
+
+      <transition-group tag="g" name="tiers">
+        <text
+          class="tier-label"
+          v-for="tier in tiers"
+          v-bind:style="tier.style"
+          v-bind:key="tier.number"
+          v-on:click="cycleTier(tier)">{{ tier.label }}</text>
       </transition-group>
     </svg>
   </div>
@@ -60,7 +69,8 @@ import {
   getClassNameForMap,
   getCoordsForMap,
   getLinkBetweenMaps,
-  getTransformForMap
+  getTransformForMap,
+  getTransformForTier
 } from './components/map-drawing'
 
 
@@ -69,10 +79,12 @@ export default {
   store,
   computed: {
     // TODO: Figure out why annotating `this` is necessary.
-    completedMapsCount(this: Vue): number {
+    completedMapsCount (this: Vue): number {
+
       return this.$store.getters.completedMapsCount
     },
-    links(this: Vue): Array<{ d: string, id: number }> {
+    links (this: Vue): Array<{ d: string, id: number }> {
+
       const links: Array<{ d: string, id: number }> = []
 
       let id = 0
@@ -90,7 +102,8 @@ export default {
 
       return links
     },
-    nodes(this: Vue): App.Node[] {
+    nodes (this: Vue): App.Node[] {
+
       return this.$store.state.maps.map((map: App.Map) => {
         return {
           ...map,
@@ -101,26 +114,51 @@ export default {
         }
       })
     },
-    totalMapsCount(this: Vue): number {
+    tiers (this: Vue) {
+
+      return this.$store.state.tiers.map((tier: App.Tier) => {
+        return {
+          ...tier,
+          style: {
+            transform: getTransformForTier(tier)
+          }
+        }
+      })
+    },
+    totalMapsCount (this: Vue): number {
+
       return this.$store.getters.totalMapsCount
     }
   },
   methods: {
-    clearLocalStorage(): void {
+    clearLocalStorage (): void {
+
       localStorage.removeItem('patrocles:store')
       window.location.reload()
     },
-    cycle(map: App.Map): void {
+    cycle (map: App.Map): void {
+
       if (map.owned && !map.completed) {
-        return store.commit('completeMap', map.id)
+        return store.commit('completeMap', map)
       }
       if (map.completed) {
-        return store.commit('clearMap', map.id)
+        return store.commit('clearMap', map)
       }
-      return store.commit('acquireMap', map.id)
+      return store.commit('acquireMap', map)
+    },
+    cycleTier (tier: App.Tier): void {
+
+      if (tier.owned && !tier.completed) {
+        return store.commit('completeTier', tier)
+      }
+      if (tier.completed) {
+        return store.commit('clearTier', tier)
+      }
+      return store.commit('acquireTier', tier)
     }
   },
-  beforeCreate(this: Vue): void {
+  beforeCreate (this: Vue): void {
+
     this.$store.commit('initializeStore')
   }
 }
@@ -196,5 +234,9 @@ rect.is-completed {
 }
 .count {
   color: #333;
+}
+text.tier-label {
+  cursor: pointer;
+  fill: #999;
 }
 </style>

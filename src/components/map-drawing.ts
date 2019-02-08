@@ -7,13 +7,14 @@ import {
 
 export const MAP_DIMENSIONS = 20 // px
 export const SVG_PADDING = 20 // px
-export const VIEW_HEIGHT = 650 // px
+export const VIEW_HEIGHT = 620 // px
 
 
 /**
  * Returns the CSS classes which should be assigned to a map's SVG object.
  */
 export function getClassNameForMap (map: App.Map) {
+
   const classes = []
 
   if (map.unique) { classes.push('is-unique') }
@@ -28,7 +29,8 @@ export function getClassNameForMap (map: App.Map) {
  * Accepts an adjustment which will be applied to both the x and y coordinates.
  */
 export function getCoordsForMap (map: App.Map, opt: { adjustment?: number } = {}) {
-  let x = ((map.tier - 1) * 175) + SVG_PADDING
+
+  let x = getXCoordForTierNumber(map.tier)
 
   const scale = d3.scalePoint()
     .domain(getMapsInTier(map.tier).map(m => m.name))
@@ -49,6 +51,7 @@ export function getCoordsForMap (map: App.Map, opt: { adjustment?: number } = {}
  * two maps.
  */
 export function getLinkBetweenMaps (fromName: string, toName: string) {
+
   const start = getCoordsForMap(getMapByName(fromName), { adjustment: MAP_DIMENSIONS / 2 })
   const end = getCoordsForMap(getMapByName(toName), { adjustment: MAP_DIMENSIONS / 2 })
 
@@ -71,6 +74,24 @@ export function getLinkBetweenMaps (fromName: string, toName: string) {
  * object for a given map.
  */
 export function getTransformForMap (map: App.Map) {
+
   const c = getCoordsForMap(map)
   return `translate(${c.x}px, ${c.y}px)`
+}
+
+/**
+ * Returns a CSS transform value string which should be applied to the SVG
+ * object for a given map.
+ */
+export function getTransformForTier (tier: App.Tier) {
+
+  return `translate(${getXCoordForTierNumber(tier.number)}px, ${VIEW_HEIGHT + 20}px)`
+}
+
+/**
+ * Returns the X coordinate for maps or labels in a given tier.
+ */
+export function getXCoordForTierNumber (tier: number) {
+
+  return ((tier - 1) * 175) + SVG_PADDING
 }
