@@ -214,6 +214,7 @@ path.is-drop-only {
 rect {
   cursor: pointer;
   fill: #f2f2f2;
+  shape-rendering: crispedges;
   stroke: #999;
   stroke-dasharray: 4 4;
   transition: all 0.25s;
