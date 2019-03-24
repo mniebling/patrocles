@@ -415,6 +415,7 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Sepulchre` }
     , { to: `Lair` }
+    , { to: `Vault` }
     ]
   }
 , { id: 38
