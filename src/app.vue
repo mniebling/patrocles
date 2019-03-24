@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <div class="chart-container">
-    <svg width="2850px" height="670px">
+    <svg width="2750px" height="670px">
       <transition-group tag="g" name="links">
         <path
           v-for="(link, index) in links"

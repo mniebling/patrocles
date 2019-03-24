@@ -1,13 +1,26 @@
 import * as d3 from 'd3'
-
+import { tiers } from '@/store/tiers'
 import {
   getMapByName,
   getMapsInTier
 } from './map-data-helpers'
 
+
 export const MAP_DIMENSIONS = 20 // px
 export const SVG_PADDING = 20 // px
 export const VIEW_HEIGHT = 620 // px
+
+// Calculate the label widths once up front.
+const tierXCoords: number[] = [SVG_PADDING]
+
+tiers.reduce((accumXCoord, tier) => {
+
+  const width = getMaxLabelWidthForTier(tier.number)
+
+  tierXCoords.push(width + accumXCoord)
+  return width + accumXCoord
+
+}, SVG_PADDING)
 
 
 /**
@@ -70,6 +83,19 @@ export function getLinkBetweenMaps (fromName: string, toName: string) {
 }
 
 /**
+ * Get the width of the longest text label for all the maps in a tier.
+ */
+export function getMaxLabelWidthForTier (tier: number) {
+
+  const maps = getMapsInTier(tier)
+  const longestLength = d3.max(maps, m => m.name.length) || 0
+
+  // Arbitrary factor chosen to look good. Could use BBox but then we'd have
+  // to be rendering them first and it's harder to have a pure function here.
+  return (longestLength * 10) + 20
+}
+
+/**
  * Returns a CSS transform value string which should be applied to the SVG
  * object for a given map.
  */
@@ -93,5 +119,5 @@ export function getTransformForTier (tier: App.Tier) {
  */
 export function getXCoordForTierNumber (tier: number) {
 
-  return ((tier - 1) * 175) + SVG_PADDING
+  return tierXCoords[tier - 1]
 }
