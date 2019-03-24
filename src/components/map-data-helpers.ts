@@ -2,15 +2,18 @@ import store from '@/store/store'
 
 
 /** Returns the number of maps in a given tier. */
-export function countMapsInTier(tier: number) {
+export function countMapsInTier (tier: number) {
+
   return getMapsInTier(tier).length
 }
 
-export function getMapAtId(id: number) {
+export function getMapAtId (id: number) {
+
   return store.state.maps.find(map => map.id === id)
 }
 
-export function getMapByName(name: string) {
+export function getMapByName (name: string) {
+
   const result = store.state.maps.find(map => map.name === name)
 
   if (result === undefined) {
@@ -21,11 +24,13 @@ export function getMapByName(name: string) {
 }
 
 /** Returns all maps in a given tier. */
-export function getMapsInTier(tier: number) {
+export function getMapsInTier (tier: number) {
+
   return store.state.maps.filter(m => m.tier === tier)
 }
 
 /** Returns the 0-indexed ordinal position of a given map in its tier. */
-export function positionInTier(map: App.Map) {
+export function positionInTier (map: App.Map) {
+
   return getMapsInTier(map.tier).indexOf(map)
 }
