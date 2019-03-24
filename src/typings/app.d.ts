@@ -14,7 +14,9 @@ declare namespace App {
     level: number
     name: string
     owned: boolean
+    shaped?: boolean
     unique?: boolean
+    unlocked: boolean
     tier: number
   }
 

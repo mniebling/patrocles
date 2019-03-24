@@ -1,1194 +1,1278 @@
 export const maps: App.Map[] = [
   // #region Tier 1
   { id: 1
-  , name: `Atoll`
+  , name: `Cursed Crypt`
   , tier: 1
   , level: 68
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Arid Lake` }
-    , { to: `Iceberg` }
-    , { to: `Maelström of Chaos` }
+    [ { to: `Dungeon` }
+    , { to: `Cursed Crypt`}
     ]
   }
 , { id: 2
-  , name: `Maelström of Chaos`
+  , name: `The Coward's Trial`
   , tier: 1
   , level: 68
   , completed: false
+  , unlocked: false
   , owned: false
   , unique: true
   }
 , { id: 3
-  , name: `Channel`
+  , name: `Alleyways`
   , tier: 1
   , level: 68
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Armoury` }
-    , { to: `Thicket` }
+    [ { to: `Excavation` }
+    , { to: `Haunted Mansion` }
     ]
   }
 , { id: 4
-  , name: `Flooded Mine`
+  , name: `Fungal Hollow`
   , tier: 1
   , level: 68
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dungeon` }
+    [ { to: `Peninsula` }
+    , { to: `Strand` }
     ]
   }
 , { id: 5
-  , name: `Ramparts`
+  , name: `Iceberg`
   , tier: 1
   , level: 68
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Pen` }
+    [ { to: `Ramparts` }
     ]
   }
   // #endregion
   // #region Tier 2
 , { id: 6
-  , name: `Arid Lake`
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Fungal Hollow` }
-    , { to: `Grotto` }
-    ]
-  }
-, { id: 7
-  , name: `Iceberg`
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Grotto` }
-    , { to: `Cursed Crypt` }
-    ]
-  }
-, { id: 8
-  , name: `Armoury`
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Graveyard` }
-    , { to: `Excavation` }
-    ]
-  }
-, { id: 9
-  , name: `Thicket`
-  , tier: 2
-  , level: 69
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Excavation` }
-    , { to: `Desert` }
-    ]
-  }
-, { id: 10
   , name: `Dungeon`
   , tier: 2
   , level: 69
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Shipyard` }
-    , { to: `Peninsula` }
+    [ { to: `Arid Lake` }
+    , { to: `Leyline` }
+    , { to: `Barrows` }
     ]
   }
-, { id: 11
-  , name: `Pen`
+, { id: 7
+  , name: `Excavation`
   , tier: 2
   , level: 69
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Bone Crypt` }
-    , { to: `Cage` }
+    [ { to: `Maze` }
+    ]
+  }
+, { id: 8
+  , name: `Haunted Mansion`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Desert` }
+    ]
+  }
+, { id: 9
+  , name: `Peninsula`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Spider Lair` }
+    ]
+  }
+, { id: 10
+  , name: `Strand`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Channel` }
+    ]
+  }
+, { id: 11
+  , name: `Ramparts`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Jungle Valley` }
+    , { to: `Ashen Woods` }
+    , { to: `Atoll` }
     ]
   }
   // #endregion
   // #region Tier 3
 , { id: 12
-  , name: `Fungal Hollow`
+  , name: `Arid Lake`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Marshes` }
-    , { to: `Lighthouse` }
+    [ { to: `Beach` }
     ]
   }
 , { id: 13
-  , name: `Grotto`
+  , name: `Leyline`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Lighthouse` }
+    [ { to: `Port` }
     ]
   }
 , { id: 14
-  , name: `Cursed Crypt`
+  , name: `Barrows`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Crater` }
-    , { to: `The Coward's Trial` }
+    [ { to: `Port` }
+    , { to: `Arcade` }
     ]
   }
-, { id: 15
-  , name: `The Coward's Trial`
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 16
-  , name: `Graveyard`
+  , name: `Maze`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Glacier` }
+    [ { to: `Mausoleum` }
     ]
   }
 , { id: 17
-  , name: `Excavation`
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Glacier` }
-    ]
-  }
-, { id: 18
   , name: `Desert`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Strand` }
-    , { to: `Spider Lair` }
+    [ { to: `Flooded Mine` }
+    ]
+  }
+, { id: 18
+  , name: `Spider Lair`
+  , tier: 3
+  , level: 70
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Lookout` }
+    , { to: `Underground Sea` }
     ]
   }
 , { id: 19
-  , name: `Shipyard`
+  , name: `Channel`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Lookout` }
-    , { to: `Courtyard` }
+    [ { to: `Underground Sea` }
+    , { to: `Armory` }
     ]
   }
 , { id: 20
-  , name: `Peninsula`
+  , name: `Jungle Valley`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Courtyard` }
+    [ { to: `City Square` }
     ]
   }
 , { id: 21
-  , name: `Bone Crypt`
+  , name: `Ashen Woods`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Barrows` }
-    , { to: `Beach`}
-    , { to: `Olmec's Sanctum` }
+    [ { to: `City Square` }
     ]
   }
-, { id: 22
-  , name: `Olmec's Sanctum`
-  , tier: 3
-  , level: 70
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 23
-  , name: `Cage`
+  , name: `Atoll`
   , tier: 3
   , level: 70
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Beach` }
+    [ { to: `Glacier` }
     ]
   }
   // #endregion
   // #region Tier 4
 , { id: 24
-  , name: `Marshes`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Underground Sea` }
-    , { to: `Jungle Valley` }
-    ]
-  }
-, { id: 25
-  , name: `Lighthouse`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Jungle Valley` }
-    ]
-  }
-, { id: 26
-  , name: `Crater`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Jungle Valley` }
-    , { to: `Mausoleum` }
-    ]
-  }
-, { id: 27
-  , name: `Glacier`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Alleyways` }
-    ]
-  }
-, { id: 28
-  , name: `Strand`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Whakawairua Tuahu` }
-    , { to: `Maze` }
-    ]
-  }
-, { id: 29
-  , name: `Whakawairua Tuahu`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 30
-  , name: `Spider Lair`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Maze` }
-    , { to: `Port` }
-    ]
-  }
-, { id: 31
-  , name: `Lookout`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Residence` }
-    ]
-  }
-, { id: 32
-  , name: `Courtyard`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Gardens` }
-    ]
-  }
-, { id: 33
-  , name: `Barrows`
-  , tier: 4
-  , level: 71
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Vaal Pyramid` }
-    ]
-  }
-, { id: 34
   , name: `Beach`
   , tier: 4
   , level: 71
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Vaal Pyramid` }
-    , { to: `City Square` }
+    [ { to: `Ancient City` }
+    ]
+  }
+, { id: 25
+  , name: `Port`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Pen` }
+    ]
+  }
+, { id: 26
+  , name: `Arcade`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Pen` }
+    ]
+  }
+, { id: 27
+  , name: `Mausoleum`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Cage` }
+    , { to: `Grotto` }
+    ]
+  }
+, { id: 28
+  , name: `Flooded Mine`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Grotto` }
+    , { to: `Sulphur Vents` }
+    ]
+  }
+, { id: 30
+  , name: `Lookout`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Marshes` }
+    ]
+  }
+, { id: 31
+  , name: `Underground Sea`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Marshes` }
+    , { to: `Graveyard` }
+    ]
+  }
+, { id: 32
+  , name: `Armory`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Graveyard` }
+    ]
+  }
+, { id: 33
+  , name: `City Square`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Crater` }
+    , { to: `Courtyard` }
+    ]
+  }
+, { id: 34
+  , name: `Glacier`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Courtyard` }
+    , { to: `Thicket` }
     ]
   }
   // #endregion
   // #region Tier 5
 , { id: 35
-  , name: `Underground Sea`
+  , name: `Ancient City`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Oba's Cursed Trove` }
-    , { to: `Volcano` }
+    [ { to: `Sepulchre` }
     ]
   }
-, { id: 36
-  , name: `Oba's Cursed Trove`
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 37
-  , name: `Jungle Valley`
+  , name: `Pen`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Precinct` }
+    [ { to: `Sepulchre` }
+    , { to: `Lair` }
     ]
   }
 , { id: 38
-  , name: `Mausoleum`
+  , name: `Cage`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Precinct` }
-    , { to: `Sulphur Vents` }
+    [ { to: `Burial Chambers` }
+    , { to: `Necropolis` }
     ]
   }
 , { id: 39
-  , name: `Alleyways`
+  , name: `Grotto`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Ashen Wood` }
+    [ { to: `Necropolis` }
     ]
   }
 , { id: 40
-  , name: `Maze`
+  , name: `Sulphur Vents`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Academy` }
-    , { to: `Doryani's Machinarium`}
+    [ { to: `Overgrown Shrine` }
     ]
   }
-, { id: 41
-  , name: `Doryani's Machinarium`
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 42
-  , name: `Port`
+  , name: `Marshes`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Academy` }
-    , { to: `Haunted Mansion` }
+    [ { to: `Residence` }
     ]
   }
 , { id: 43
-  , name: `Residence`
+  , name: `Graveyard`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Phantasmagoria` }
-    , { to: `Temple` }
+    [ { to: `Geode` }
     ]
   }
 , { id: 44
-  , name: `Gardens`
+  , name: `Crater`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Temple` }
-    , { to: `Wharf` }
+    [ { to: `Primordial Pool` }
+    , { to: `Pit` }
     ]
   }
 , { id: 45
-  , name: `Vaal Pyramid`
+  , name: `Courtyard`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Vaults of Atziri` }
-    , { to: `Canyon` }
+    [ { to: `Pit` }
     ]
   }
-, { id: 46
-  , name: `Vaults of Atziri`
-  , tier: 5
-  , level: 72
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 47
-  , name: `City Square`
+  , name: `Thicket`
   , tier: 5
   , level: 72
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Fields` }
+    [ { to: `Pit` }
+    , { to: `Promenade` }
     ]
   }
   // #endregion
   // #region Tier 6
 , { id: 48
-  , name: `Volcano`
+  , name: `Sepulchre`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Lava Chamber` }
+    [ { to: `Fields` }
+    , { to: `Ghetto` }
     ]
   }
 , { id: 49
-  , name: `Precinct`
+  , name: `Lair`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Conservatory` }
-    , { to: `Geode` }
+    [ { to: `Ghetto` }
+    , { to: `Bone Crypt` }
     ]
   }
 , { id: 50
-  , name: `Sulphur Vents`
+  , name: `Vault`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Geode` }
+    [ { to: `Bone Crypt` }
     ]
   }
 , { id: 51
-  , name: `Ashen Wood`
+  , name: `Burial Chambers`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Primordial Pool` }
+    [ { to: `Mineral Pools` }
     ]
   }
 , { id: 52
-  , name: `Academy`
+  , name: `Necropolis`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Underground River` }
+    [ { to: `Mineral Pools` }
+    , { to: `Mud Geyser` }
     ]
   }
 , { id: 53
-  , name: `Haunted Mansion`
+  , name: `Overgrown Shrine`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Underground River` }
-    , { to: `Cells` }
+    [ { to: `Mud Geyser` }
+    , { to: `Bazaar` }
     ]
   }
 , { id: 54
-  , name: `Phantasmagoria`
+  , name: `Residence`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Bazaar` }
-    , { to: `Arcade` }
+    [ { to: `Shore` }
     ]
   }
 , { id: 55
-  , name: `Temple`
+  , name: `Geode`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Poorjoy's Asylum` }
-    , { to: `Arcade` }
-    , { to: `Toxic Sewer` }
+    [ { to: `Shore` }
+    , { to: `Pier` }
     ]
   }
-, { id: 56
-  , name: `Poorjoy's Asylum`
-  , tier: 6
-  , level: 73
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 57
-  , name: `Wharf`
+  , name: `Primordial Pool`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Toxic Sewer` }
+    [ { to: `Estuary` }
+    , { to: `Spider Forest` }
     ]
   }
 , { id: 58
-  , name: `Canyon`
+  , name: `Pit`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Ghetto` }
+    [ { to: `Spider Forest` }
+    , { to: `Academy` }
     ]
   }
 , { id: 59
-  , name: `Fields`
+  , name: `Promenade`
   , tier: 6
   , level: 73
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dunes` }
+    [ { to: `Academy` }
     ]
   }
   // #endregion
   // #region Tier 7
 , { id: 60
-  , name: `Lava Chamber`
+  , name: `Fields`
   , tier: 7
   , level: 74
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Overgrown Ruin` }
+    [ { to: `Dunes` }
     ]
   }
 , { id: 61
-  , name: `Conservatory`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Sepulchre` }
-    ]
-  }
-, { id: 62
-  , name: `Geode`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Mineral Pools` }
-    ]
-  }
-, { id: 63
-  , name: `Primordial Pool`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Promenade` }
-    ]
-  }
-, { id: 64
-  , name: `Underground River`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Caer Blaidd, Wolfpack's Den` }
-    , { to: `Laboratory` }
-    ]
-  }
-, { id: 65
-  , name: `Caer Blaidd, Wolfpack's Den`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 66
-  , name: `Cells`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Laboratory` }
-    ]
-  }
-, { id: 67
-  , name: `Bazaar`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Shore` }
-    , { to: `Arachnid Nest` }
-    ]
-  }
-, { id: 68
-  , name: `Arcade`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Arachnid Nest` }
-    ]
-  }
-, { id: 69
-  , name: `Toxic Sewer`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Mud Geyser` }
-    ]
-  }
-, { id: 70
   , name: `Ghetto`
   , tier: 7
   , level: 74
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Wasteland` }
-    ]
-  }
-, { id: 71
-  , name: `Dunes`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Pillars of Arun` }
+    [ { to: `Lighthouse` }
     , { to: `Orchard` }
-    , { to: `Infested Valley` }
     ]
   }
-, { id: 72
-  , name: `Pillars of Arun`
+, { id: 62
+  , name: `Bone Crypt`
   , tier: 7
   , level: 74
   , completed: false
+  , unlocked: false
   , owned: false
-  , unique: true
+  , shaped: false
+  , edges:
+    [ { to: `Orchard` }
+    ]
   }
-  // #endregion
-  // #region Tier 8
-, { id: 73
-  , name: `Overgrown Ruin`
-  , tier: 8
-  , level: 75
+, { id: 63
+  , name: `Mineral Pools`
+  , tier: 7
+  , level: 74
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Conservatory` }
+    ]
+  }
+, { id: 64
+  , name: `Mud Geyser`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Conservatory` }
+    ]
+  }
+, { id: 66
+  , name: `Bazaar`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Phantasmagoria` }
+    ]
+  }
+, { id: 67
+  , name: `Estuary`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Volcano` }
+    , { to: `Cemetary` }
+    ]
+  }
+, { id: 601
+  , name: `Academy`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Lava Chambers` }
+    ]
+  }
+, { id: 68
+  , name: `Spider Forest`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Cemetary` }
+    , { to: `Lava Chambers` }
+    ]
+  }
+, { id: 69
+  , name: `Shore`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
   , edges:
     [ { to: `Waterways` }
     ]
   }
-, { id: 74
-  , name: `Sepulchre`
+, { id: 70
+  , name: `Pier`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Toxic Sewers` }
+    ]
+  }
+  // #endregion
+  // #region Tier 8
+, { id: 73
+  , name: `Dunes`
   , tier: 8
   , level: 75
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Arena` }
+    [ { to: `Underground River` }
+    , { to: `Laboratory` }
+    ]
+  }
+, { id: 74
+  , name: `Lighthouse`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Canyon` }
     ]
   }
 , { id: 75
-  , name: `Mineral Pools`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Museum` }
-    ]
-  }
-, { id: 76
-  , name: `Promenade`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Hall of Grandmasters` }
-    , { to: `Vault` }
-    ]
-  }
-, { id: 77
-  , name: `Hall of Grandmasters`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 78
-  , name: `Laboratory`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Moon Temple` }
-    ]
-  }
-, { id: 79
-  , name: `Shore`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Mao Kun` }
-    , { to: `Relic Chambers` }
-    ]
-  }
-, { id: 80
-  , name: `Mao Kun`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 81
-  , name: `Arachnid Nest`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Ancient City` }
-    ]
-  }
-, { id: 82
-  , name: `Mud Geyser`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Scriptorium` }
-    ]
-  }
-, { id: 83
-  , name: `Wasteland`
-  , tier: 8
-  , level: 75
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Cemetary` }
-    ]
-  }
-, { id: 84
   , name: `Orchard`
   , tier: 8
   , level: 75
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Waste Pool` }
+    [ { to: `Canyon` }
     ]
   }
-, { id: 85
-  , name: `Infested Valley`
+, { id: 76
+  , name: `Conservatory`
   , tier: 8
   , level: 75
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Vaal Pyramid` }
+    ]
+  }
+, { id: 78
+  , name: `Phantasmagoria`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
   , edges:
     [ { to: `Tropical Island` }
+    , { to: `Coral Ruins` }
+    ]
+  }
+, { id: 79
+  , name: `Volcano`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Coral Ruins` }
+    , { to: `Museum` }
+    ]
+  }
+, { id: 81
+  , name: `Cemetary`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Museum` }
+    , { to: `Castle Ruins` }
+    ]
+  }
+, { id: 82
+  , name: `Lava Chambers`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Castle Ruins` }
+    ]
+  }
+, { id: 83
+  , name: `Waterways`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Temple` }
+    ]
+  }
+, { id: 84
+  , name: `Toxic Sewers`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Villa` }
+    ]
+  }
+, { id: 85
+  , name: `Arachnid Tomb`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Villa` }
+    , { to: `Cells` }
+    , { to: `Underground River` }
     ]
   }
   // #endregion
   // #region Tier 9
 , { id: 86
-  , name: `Waterways`
+  , name: `Underground River`
   , tier: 9
   , level: 76
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Belfry` }
+    [ { to: `Overgrown Ruin` }
     ]
   }
 , { id: 87
-  , name: `Arena`
+  , name: `Laboratory`
   , tier: 9
   , level: 76
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Leyline` }
-    , { to: `Coral Ruins` }
+    [ { to: `Overgrown Ruin` }
+    , { to: `Plateau` }
     ]
   }
 , { id: 88
-  , name: `Museum`
+  , name: `Canyon`
   , tier: 9
   , level: 76
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `The Putrid Cloister` }
-    , { to: `Coral Ruins` }
+    [ { to: `Plateau` }
+    , { to: `Moon Temple` }
     ]
   }
-, { id: 89
-  , name: `The Putrid Cloister`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 90
-  , name: `Vault`
+  , name: `Vaal Pyramid`
   , tier: 9
   , level: 76
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Coves` }
+    [ { to: `Mesa` }
     ]
   }
 , { id: 91
-  , name: `Moon Temple`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `The Twilight Temple` }
-    , { to: `Pit` }
-    ]
-  }
-, { id: 92
-  , name: `The Twilight Temple`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 93
-  , name: `Relic Chambers`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Plaza` }
-    ]
-  }
-, { id: 94
-  , name: `Ancient City`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Plaza` }
-    ]
-  }
-, { id: 95
-  , name: `Scriptorium`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Plateau` }
-    ]
-  }
-, { id: 96
-  , name: `Cemetary`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Hallowed Ground` }
-    , { to: `Pier` }
-    ]
-  }
-, { id: 97
-  , name: `Hallowed Ground`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , unique: true
-  }
-, { id: 98
-  , name: `Waste Pool`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Pier` }
-    ]
-  }
-, { id: 99
   , name: `Tropical Island`
   , tier: 9
   , level: 76
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Spider Forest` }
-    , { to: `Estuary` }
+    [ { to: `Mesa` }
+    , { to: `Scriptorium` }
+    ]
+  }
+, { id: 93
+  , name: `Temple`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Arachnid Nest` }
+    , { to: `Chateau` }
+    ]
+  }
+, { id: 94
+  , name: `Villa`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Chateau` }
+    , { to: `Wharf` }
+    ]
+  }
+, { id: 602
+  , name: `Cells`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Wharf` }
+    ]
+  }
+, { id: 95
+  , name: `Coral Ruins`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Factory` }
+    ]
+  }
+, { id: 96
+  , name: `Museum`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Factory` }
+    , { to: `Relic Chambers` }
+    ]
+  }
+, { id: 98
+  , name: `Castle Ruins`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Relic Chambers` }
     ]
   }
   // #endregion
   // #region Tier 10
 , { id: 100
-  , name: `Belfry`
+  , name: `Overgrown Ruin`
   , tier: 10
   , level: 77
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Arachnid Tomb` }
+    [ { to: `Desert Springs` }
     ]
   }
 , { id: 101
-  , name: `Leyline`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Mesa` }
-    ]
-  }
-, { id: 102
-  , name: `Coral Ruins`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Crystal Ore` }
-    ]
-  }
-, { id: 103
-  , name: `Coves`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Burial Chambers` }
-    ]
-  }
-, { id: 104
-  , name: `Pit`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Park` }
-    ]
-  }
-, { id: 105
-  , name: `Plaza`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Siege` }
-    ]
-  }
-, { id: 106
   , name: `Plateau`
   , tier: 10
   , level: 77
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Desert Springs` }
+    ]
+  }
+, { id: 102
+  , name: `Moon Temple`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Desert Springs` }
+    , { to: `Palace` }
+    ]
+  }
+, { id: 103
+  , name: `Mesa`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Wasteland` }
+    , { to: `Arsenal` }
+    , { to: `Coves` }
+    ]
+  }
+, { id: 104
+  , name: `Scriptorium`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Coves` }
+    ]
+  }
+, { id: 105
+  , name: `Arachnid Nest`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
   , edges:
     [ { to: `Bog` }
+    , { to: `Basilica` }
+    ]
+  }
+, { id: 106
+  , name: `Chateau`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Basilica` }
+    , { to: `Infested` }
     ]
   }
 , { id: 107
-  , name: `Pier`
+  , name: `Wharf`
   , tier: 10
   , level: 77
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Factory` }
+    [ { to: `Infested` }
     ]
   }
 , { id: 108
-  , name: `Spider Forest`
+  , name: `Factory`
   , tier: 10
   , level: 77
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Factory` }
-    , { to: `Chateau` }
+    [ { to: `Dig` }
+    , { to: `Arena` }
     ]
   }
 , { id: 109
-  , name: `Estuary`
+  , name: `Relic Chambers`
   , tier: 10
   , level: 77
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Chateau` }
-    , { to: `Lair` }
+    [ { to: `Arena` }
     ]
-  }
-, { id: 110
-  , name: `The Vinktar Square`
-  , tier: 10
-  , level: 77
-  , completed: false
-  , owned: false
-  , unique: true
   }
   // #endregion
   // #region Tier 11
 , { id: 111
-  , name: `Arachnid Tomb`
+  , name: `Desert Springs`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Villa` }
+    [ { to: `Crystal Ore` }
+    , { to: `Reef` }
     ]
   }
 , { id: 112
-  , name: `Mesa`
+  , name: `Palace`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Colonnade` }
+    [ { to: `Reef` }
     ]
   }
 , { id: 113
-  , name: `Crystal Ore`
+  , name: `Wasteland`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Colonnade` }
+    [ { to: `Courthouse` }
     ]
   }
 , { id: 114
-  , name: `Burial Chambers`
+  , name: `Arsenal`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Necropolis` }
+    [ { to: `Terrace` }
     ]
   }
 , { id: 115
-  , name: `Park`
+  , name: `Coves`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Defiled Cathedral` }
+    [ { to: `Terrace` }
     ]
   }
 , { id: 116
-  , name: `Siege`
+  , name: `Bog`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Malformation` }
     ]
@@ -1198,377 +1282,434 @@ export const maps: App.Map[] = [
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Arsenal` }
-    , { to: `Overgrown Shrine` }
+    [ { to: `Precinct` }
+    , { to: `Carcass` }
     ]
   }
 , { id: 118
-  , name: `Factory`
+  , name: `Basilica`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Ivory Temple` }
+    [ { to: `Carcass` }
     ]
   }
 , { id: 119
-  , name: `Chateau`
+  , name: `Infested`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `The Perandus Manor` }
-    , { to: `Castle Ruins` }
+    [ { to: `Malformation` }
     ]
   }
-, { id: 120
-  , name: `The Perandus Manor`
-  , tier: 11
-  , level: 78
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 121
-  , name: `Lair`
+  , name: `Dig`
   , tier: 11
   , level: 78
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Castle Ruins` }
+    [ { to: `Acid Caverns` }
+    ]
+  }
+, { id: 600
+  , name: `Arena`
+  , tier: 11
+  , level: 78
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Acid Caverns` }
+    , { to: `Sunken City` }
     ]
   }
   // #endregion
   // #region Tier 12
 , { id: 122
-  , name: `Villa`
+  , name: `Crystal Ore`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Acid Caverns` }
-    , { to: `Reef` }
+    [ { to: `Gardens` }
+    , { to: `Siege` }
     ]
   }
 , { id: 123
-  , name: `Colonnade`
+  , name: `Reef`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Core` }
+    [ { to: `Siege` }
     ]
   }
 , { id: 124
-  , name: `Necropolis`
+  , name: `Courthouse`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Death and Taxes` }
-    , { to: `Racecourse` }
+    [ { to: `Colonnade` }
     ]
   }
-, { id: 125
-  , name: `Death and Taxes`
-  , tier: 12
-  , level: 79
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 126
-  , name: `Defiled Cathedral`
+  , name: `Terrace`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Caldera` }
+    [ { to: `Colonnade` }
+    , { to: `Tower` }
     ]
   }
 , { id: 127
-  , name: `Malformation`
+  , name: `Precinct`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Colosseum` }
     ]
   }
 , { id: 128
-  , name: `Arsenal`
+  , name: `Carcass`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Shrine` }
+    [ { to: `Colosseum` }
     ]
   }
 , { id: 129
-  , name: `Overgrown Shrine`
+  , name: `Malformation`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Acton's Nightmare` }
-    , { to: `Shrine` }
+    [ { to: `Shipyard` }
     ]
   }
-, { id: 130
-  , name: `Acton's Nightmare`
-  , tier: 12
-  , level: 79
-  , completed: false
-  , owned: false
-  , unique: true
-  }
 , { id: 131
-  , name: `Ivory Temple`
+  , name: `Acid Caverns`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dig` }
+    [ { to: `Summit` }
+    , { to: `Crimson Temple` }
     ]
   }
 , { id: 132
-  , name: `Castle Ruins`
+  , name: `Sunken City`
   , tier: 12
   , level: 79
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Crimson Temple` }
+    , { to: `Park` }
     ]
   }
   // #endregion
   // #region Tier 13
 , { id: 133
-  , name: `Acid Caverns`
+  , name: `Gardens`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dark Forest` }
+    [ { to: `Plaza` }
     ]
   }
 , { id: 134
-  , name: `Reef`
+  , name: `Siege`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dark Forest` }
+    [ { to: `Plaza` }
     ]
   }
 , { id: 135
-  , name: `Core`
+  , name: `Colonnade`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Dark Forest` }
+    [ { to: `Primordial Blocks` }
+    , { to: `Racecourse` }
     ]
   }
 , { id: 136
-  , name: `Racecourse`
+  , name: `Tower`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Palace` }
+    [ { to: `Racecourse` }
     ]
   }
 , { id: 137
-  , name: `Caldera`
-  , tier: 13
-  , level: 80
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Sunken City` }
-    , { to: `Basilica` }
-    ]
-  }
-, { id: 138
   , name: `Colosseum`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Courthouse` }
+    [ { to: `Belfry` }
+    ]
+  }
+, { id: 138
+  , name: `Shipyard`
+  , tier: 13
+  , level: 80
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Belfry` }
+    , { to: `Shrine` }
     ]
   }
 , { id: 139
-  , name: `Shrine`
+  , name: `Summit`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Courthouse` }
-    , { to: `Carcass` }
+    [ { to: `Caldera` }
     ]
   }
 , { id: 140
-  , name: `Dig`
-  , tier: 13
-  , level: 80
-  , completed: false
-  , owned: false
-  , edges:
-    [ { to: `Terrace` }
-    ]
-  }
-, { id: 141
   , name: `Crimson Temple`
   , tier: 13
   , level: 80
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Terrace` }
+    [ { to: `Caldera` }
+    , { to: `Ivory Temple` }
+    ]
+  }
+, { id: 141
+  , name: `Park`
+  , tier: 13
+  , level: 80
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Ivory Temple` }
     ]
   }
   // #endregion
   // #region Tier 14
  , { id: 142
-  , name: `Dark Forest`
+  , name: `Plaza`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Tower` }
+    [ { to: `Defiled Cathedral` }
     ]
   }
 , { id: 143
-  , name: `Palace`
+  , name: `Primordial Blocks`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Desert Spring` }
-    , { to: `Lava Lake` }
+    [ { to: `Lava Lake` }
     ]
   }
 , { id: 144
-  , name: `Sunken City`
+  , name: `Racecourse`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Lava Lake` }
     ]
   }
 , { id: 145
-  , name: `Basilica`
+  , name: `Belfry`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Lava Lake` }
+    [ { to: `Waste Pool` }
     ]
   }
 , { id: 146
-  , name: `Courthouse`
+  , name: `Shrine`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Primordial Blocks` }
+    [ { to: `Waste Pool` }
     ]
   }
 , { id: 147
-  , name: `Carcass`
+  , name: `Caldera`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Primordial Blocks` }
+    [ { to: `Dark Forest` }
     ]
   }
 , { id: 148
-  , name: `Terrace`
+  , name: `Ivory Temple`
   , tier: 14
   , level: 81
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Summit` }
+    [ { to: `Core` }
     ]
   }
   // #endregion
   // #region Tier 15
 , { id: 149
-  , name: `Tower`
+  , name: `Defiled Cathedral`
   , tier: 15
   , level: 82
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Lair of the Hydra` }
     ]
   }
 , { id: 150
-  , name: `Desert Spring`
+  , name: `Lava Lake`
   , tier: 15
   , level: 82
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Pit of the Chimera` }
     ]
   }
 , { id: 151
-  , name: `Lava Lake`
+  , name: `Dark Forest`
   , tier: 15
   , level: 82
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
-    [ { to: `Pit of the Chimera` }
+    [ { to: `Maze of the Minotaur` }
     ]
   }
 , { id: 152
-  , name: `Primordial Blocks`
+  , name: `Core`
   , tier: 15
   , level: 82
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Maze of the Minotaur` }
     ]
   }
 , { id: 153
-  , name: `Summit`
+  , name: `Waste Pool`
   , tier: 15
   , level: 82
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [ { to: `Forge of the Phoenix` }
     ]
@@ -1580,7 +1721,9 @@ export const maps: App.Map[] = [
   , tier: 16
   , level: 83
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [
     ]
@@ -1590,7 +1733,9 @@ export const maps: App.Map[] = [
   , tier: 16
   , level: 83
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [
     ]
@@ -1600,7 +1745,9 @@ export const maps: App.Map[] = [
   , tier: 16
   , level: 83
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [
     ]
@@ -1610,7 +1757,9 @@ export const maps: App.Map[] = [
   , tier: 16
   , level: 83
   , completed: false
+  , unlocked: false
   , owned: false
+  , shaped: false
   , edges:
     [
     ]
