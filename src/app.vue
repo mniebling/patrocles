@@ -1,6 +1,13 @@
 <template>
 <div id="app">
-  <div class="chart-container">
+  <div
+    v-bind:class="{
+      'show-left-fade': showLeftFade,
+      'show-right-fade': showRightFade
+    }"
+    v-on:scroll.passive="onScroll()"
+    id="chart-container">
+
     <svg width="2750px" height="670px">
       <transition-group tag="g" name="links">
         <path
@@ -77,6 +84,10 @@ import {
 export default {
   name: 'app',
   store,
+  data: () => ({
+    showLeftFade: false,
+    showRightFade: true
+  }),
   computed: {
     // TODO: Figure out why annotating `this` is necessary.
     completedMapsCount (this: Vue): number {
@@ -155,6 +166,15 @@ export default {
         return store.commit('clearTier', tier)
       }
       return store.commit('acquireTier', tier)
+    },
+    onScroll (): void {
+
+      const container = document.getElementById('chart-container')
+      if (!container) { throw new Error(`Couldn't find chart container!`) }
+
+      const fullyScrolledLeft = container.scrollWidth - document.body.clientWidth
+
+      this.showRightFade = (container.scrollLeft !== fullyScrolledLeft)
     }
   },
   beforeCreate (this: Vue): void {
@@ -174,12 +194,12 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
 }
-.chart-container {
+#chart-container {
   overflow-x: auto;
   position: relative;
   width: 100%;
 }
-.chart-container::after {
+#chart-container.show-right-fade::after {
   background: linear-gradient(to right, rgba(0,0,0,0), #f2f2f2);
   content: '';
   height: 100%;
