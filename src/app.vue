@@ -81,10 +81,15 @@ import {
 } from './components/map-drawing'
 
 
+interface AppComponentData {
+  showLeftFade: boolean,
+  showRightFade: boolean
+}
+
 export default {
   name: 'app',
   store,
-  data: () => ({
+  data: (): AppComponentData => ({
     showLeftFade: false,
     showRightFade: true
   }),
