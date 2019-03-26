@@ -81,7 +81,7 @@ import {
 } from './components/map-drawing'
 
 
-interface AppComponentData {
+interface AppComponentViewModel {
   showLeftFade: boolean,
   showRightFade: boolean
 }
@@ -89,7 +89,7 @@ interface AppComponentData {
 export default {
   name: 'app',
   store,
-  data: (): AppComponentData => ({
+  data: (): AppComponentViewModel => ({
     showLeftFade: false,
     showRightFade: true
   }),
@@ -172,7 +172,8 @@ export default {
       }
       return store.commit('acquireTier', tier)
     },
-    onScroll (): void {
+    // TODO: This `this` typing seems weird.
+    onScroll (this: AppComponentViewModel): void {
 
       const container = document.getElementById('chart-container')
       if (!container) { throw new Error(`Couldn't find chart container!`) }
