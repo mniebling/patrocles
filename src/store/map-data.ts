@@ -1,3 +1,5 @@
+export const version = '3.6.1'
+
 export const maps: App.Map[] = [
   // #region Tier 1
   { id: 1
@@ -11,6 +13,7 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Dungeon` }
     , { to: `Cursed Crypt`}
+    , { to: `The Coward's Trial` }
     ]
   }
 , { id: 2
@@ -122,7 +125,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Channel` }
+    , { to: `Whakawairua Tuahu` }
     ]
+  }
+, { id: 900
+  , name: `Whakawairua Tuahu`
+  , tier: 2
+  , level: 69
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 11
   , name: `Ramparts`
@@ -134,7 +147,7 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Jungle Valley` }
-    , { to: `Ashen Woods` }
+    , { to: `Ashen Wood` }
     , { to: `Atoll` }
     ]
   }
@@ -187,7 +200,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Mausoleum` }
+    , { to: `Doryani's Machinarium` }
     ]
+  }
+, { id: 902
+  , name: `Doryani's Machinarium`
+  , tier: 3
+  , level: 70
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 17
   , name: `Desert`
@@ -240,7 +263,7 @@ export const maps: App.Map[] = [
     ]
   }
 , { id: 21
-  , name: `Ashen Woods`
+  , name: `Ashen Wood`
   , tier: 3
   , level: 70
   , completed: false
@@ -261,7 +284,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Glacier` }
+    , { to: `Maelström of Chaos` }
     ]
+  }
+, { id: 901
+  , name: `Maelström of Chaos`
+  , tier: 3
+  , level: 70
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
   // #endregion
   // #region Tier 4
@@ -350,7 +383,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Marshes` }
     , { to: `Graveyard` }
+    , { to: `Oba's Cursed Trove` }
     ]
+  }
+, { id: 904
+  , name: `Oba's Cursed Trove`
+  , tier: 4
+  , level: 71
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 32
   , name: `Armory`
@@ -502,7 +545,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Pit` }
+    , { to: `The Vinktar Square` }
     ]
+  }
+, { id: 905
+  , name: `The Vinktar Square`
+  , tier: 5
+  , level: 72
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 47
   , name: `Thicket`
@@ -580,7 +633,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Mineral Pools` }
     , { to: `Mud Geyser` }
+    , { to: `Death and Taxes` }
     ]
+  }
+, { id: 907
+  , name: `Death and Taxes`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 53
   , name: `Overgrown Shrine`
@@ -593,7 +656,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Mud Geyser` }
     , { to: `Bazaar` }
+    , { to: `Acton's Nightmare` }
     ]
+  }
+, { id: 908
+  , name: `Acton's Nightmare`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 54
   , name: `Residence`
@@ -656,7 +729,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Academy` }
+    , { to: `Hall of Grandmasters` }
     ]
+  }
+, { id: 906
+  , name: `Hall of Grandmasters`
+  , tier: 6
+  , level: 73
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
   // #endregion
   // #region Tier 7
@@ -695,7 +778,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Orchard` }
+    , { to: `Olmec's Sanctum` }
     ]
+  }
+, { id: 909
+  , name: `Olmec's Sanctum`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 63
   , name: `Mineral Pools`
@@ -746,18 +839,6 @@ export const maps: App.Map[] = [
     , { to: `Cemetary` }
     ]
   }
-, { id: 601
-  , name: `Academy`
-  , tier: 7
-  , level: 74
-  , completed: false
-  , unlocked: false
-  , owned: false
-  , shaped: false
-  , edges:
-    [ { to: `Lava Chambers` }
-    ]
-  }
 , { id: 68
   , name: `Spider Forest`
   , tier: 7
@@ -771,6 +852,18 @@ export const maps: App.Map[] = [
     , { to: `Lava Chambers` }
     ]
   }
+, { id: 601
+  , name: `Academy`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Lava Chambers` }
+    ]
+  }
 , { id: 69
   , name: `Shore`
   , tier: 7
@@ -781,7 +874,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Waterways` }
+    , { to: `Mao Kun` }
     ]
+  }
+, { id: 910
+  , name: `Mao Kun`
+  , tier: 7
+  , level: 74
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 70
   , name: `Pier`
@@ -808,7 +911,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Underground River` }
     , { to: `Laboratory` }
+    , { to: `Pillars of Arun` }
     ]
+  }
+, { id: 911
+  , name: `Pillars of Arun`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 74
   , name: `Lighthouse`
@@ -883,7 +996,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Museum` }
     , { to: `Castle Ruins` }
+    , { to: `Hallowed Ground` }
     ]
+  }
+, { id: 912
+  , name: `Hallowed Ground`
+  , tier: 8
+  , level: 75
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 82
   , name: `Lava Chambers`
@@ -947,7 +1070,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Overgrown Ruin` }
+    , { to: `Caer Blaidd, Wolfpack's Den` }
     ]
+  }
+, { id: 916
+  , name: `Caer Blaidd, Wolfpack's Den`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 87
   , name: `Laboratory`
@@ -985,7 +1118,17 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Mesa` }
+    , { to: `Vaults of Atziri` }
     ]
+  }
+, { id: 913
+  , name: `Vaults of Atziri`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 91
   , name: `Tropical Island`
@@ -998,44 +1141,6 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Mesa` }
     , { to: `Scriptorium` }
-    ]
-  }
-, { id: 93
-  , name: `Temple`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , unlocked: false
-  , owned: false
-  , shaped: false
-  , edges:
-    [ { to: `Arachnid Nest` }
-    , { to: `Chateau` }
-    ]
-  }
-, { id: 94
-  , name: `Villa`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , unlocked: false
-  , owned: false
-  , shaped: false
-  , edges:
-    [ { to: `Chateau` }
-    , { to: `Wharf` }
-    ]
-  }
-, { id: 602
-  , name: `Cells`
-  , tier: 9
-  , level: 76
-  , completed: false
-  , unlocked: false
-  , owned: false
-  , shaped: false
-  , edges:
-    [ { to: `Wharf` }
     ]
   }
 , { id: 95
@@ -1061,7 +1166,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Factory` }
     , { to: `Relic Chambers` }
+    , { to: `The Putrid Cloister` }
     ]
+  }
+, { id: 914
+  , name: `The Putrid Cloister`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 98
   , name: `Castle Ruins`
@@ -1073,6 +1188,54 @@ export const maps: App.Map[] = [
   , shaped: false
   , edges:
     [ { to: `Relic Chambers` }
+    ]
+  }
+, { id: 93
+  , name: `Temple`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Arachnid Nest` }
+    , { to: `Chateau` }
+    , { to: `Poorjoy's Asylum` }
+    ]
+  }
+, { id: 915
+  , name: `Poorjoy's Asylum`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
+  }
+, { id: 94
+  , name: `Villa`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Chateau` }
+    , { to: `Wharf` }
+    ]
+  }
+, { id: 602
+  , name: `Cells`
+  , tier: 9
+  , level: 76
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , shaped: false
+  , edges:
+    [ { to: `Wharf` }
     ]
   }
   // #endregion
@@ -1112,7 +1275,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Desert Springs` }
     , { to: `Palace` }
+    , { to: `The Twilight Temple` }
     ]
+  }
+, { id: 917
+  , name: `The Twilight Temple`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 103
   , name: `Mesa`
@@ -1164,7 +1337,17 @@ export const maps: App.Map[] = [
   , edges:
     [ { to: `Basilica` }
     , { to: `Infested` }
+    , { to: `The Perandus Manor` }
     ]
+  }
+, { id: 918
+  , name: `The Perandus Manor`
+  , tier: 10
+  , level: 77
+  , completed: false
+  , unlocked: false
+  , owned: false
+  , unique: true
   }
 , { id: 107
   , name: `Wharf`

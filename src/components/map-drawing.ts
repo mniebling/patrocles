@@ -92,7 +92,7 @@ export function getMaxLabelWidthForTier (tier: number) {
 
   // Arbitrary factor chosen to look good. Could use BBox but then we'd have
   // to be rendering them first and it's harder to have a pure function here.
-  return (longestLength * 10) + 20
+  return (longestLength * 9) + 25
 }
 
 /**
