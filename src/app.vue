@@ -8,7 +8,7 @@
     v-on:scroll.passive="onScroll()"
     id="chart-container">
 
-    <svg width="2750px" height="670px">
+    <svg width="2950px" height="670px">
       <transition-group tag="g" name="links">
         <path
           v-for="(link, index) in links"
@@ -213,6 +213,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
+  transition: 0.25s all;
   width: 15%;
 }
 svg {
